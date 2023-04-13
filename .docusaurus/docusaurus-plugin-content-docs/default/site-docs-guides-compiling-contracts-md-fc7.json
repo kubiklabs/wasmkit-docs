@@ -1,0 +1,24 @@
+{
+  "unversionedId": "guides/compiling-contracts",
+  "id": "guides/compiling-contracts",
+  "title": "Compiling your contracts",
+  "description": "Compiling contracts can be done using the command wasmkit compile.",
+  "source": "@site/docs/guides/compiling-contracts.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/compiling-contracts",
+  "permalink": "/docs/guides/compiling-contracts",
+  "draft": false,
+  "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/guides/compiling-contracts.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quick Start",
+    "permalink": "/docs/Getting-started/quickstart"
+  },
+  "next": {
+    "title": "Setting up a project",
+    "permalink": "/docs/guides/project"
+  }
+}

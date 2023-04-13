@@ -1,0 +1,24 @@
+{
+  "unversionedId": "guides/project",
+  "id": "guides/project",
+  "title": "Setting up a project",
+  "description": "Project setup can be broken down to 3 steps broadly, which are boiler plate generation, updating project name and updating wasmkit.config.js file.",
+  "source": "@site/docs/guides/project.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/project",
+  "permalink": "/docs/guides/project",
+  "draft": false,
+  "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/guides/project.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Compiling your contracts",
+    "permalink": "/docs/guides/compiling-contracts"
+  },
+  "next": {
+    "title": "Testing contracts",
+    "permalink": "/docs/guides/testing"
+  }
+}

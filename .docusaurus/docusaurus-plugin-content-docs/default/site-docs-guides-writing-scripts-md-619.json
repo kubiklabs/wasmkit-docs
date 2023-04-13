@@ -1,0 +1,20 @@
+{
+  "unversionedId": "guides/writing-scripts",
+  "id": "guides/writing-scripts",
+  "title": "Writing scripts",
+  "description": "Sample script walkthrough",
+  "source": "@site/docs/guides/writing-scripts.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/writing-scripts",
+  "permalink": "/docs/guides/writing-scripts",
+  "draft": false,
+  "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/guides/writing-scripts.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Using localnet with wasmkit",
+    "permalink": "/docs/guides/using-localenet"
+  }
+}

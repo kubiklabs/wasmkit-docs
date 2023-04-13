@@ -1,0 +1,73 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "Getting-started/installation",
+              "path": "/docs/Getting-started/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Getting-started/overview",
+              "path": "/docs/Getting-started/overview",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Getting-started/quickstart",
+              "path": "/docs/Getting-started/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "guides/compiling-contracts",
+              "path": "/docs/guides/compiling-contracts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "guides/project",
+              "path": "/docs/guides/project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "guides/testing",
+              "path": "/docs/guides/testing",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "guides/using-localenet",
+              "path": "/docs/guides/using-localenet",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "guides/writing-scripts",
+              "path": "/docs/guides/writing-scripts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}
