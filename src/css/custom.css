@@ -50,6 +50,7 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --wasmkit-logo: url(../../static/img/wasm_kit_logo_dark.png);
   --bg-img: url(../../static/img/bg_light.png);
   --ifm-standard-font-family: "Rajdhani", Manrope, Poppins, Inter,
     PingFangSC-Regular, "Microsoft YaHei", sans-serif;
@@ -66,6 +67,7 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --wasmkit-logo: url(../../static/img/wasm_kit_logo_light.png);
   --bg-img: url(../../static/img/bg_dark.png);
   --ifm-standard-font-family: "Rajdhani", Manrope, Poppins, Inter,
     PingFangSC-Regular, "Microsoft YaHei", sans-serif;
@@ -117,6 +119,13 @@ background-color: transparent !important;
 }
 .container{
   color: var(--ifm-primary-font);
+}
+.img-container{
+  height: 14rem;
+  background-image: var(--wasmkit-logo);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .footer{
   background-color: transparent !important;

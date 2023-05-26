@@ -15,12 +15,15 @@ function HomepageHeader() {
 const [ dTheme, setDTheme ] = useState(true);
 
 
-
+  
   const {siteConfig} = useDocusaurusContext();
+  // console.log(data-theme);
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <img src={wasmkitLogoLight} width="18%"></img>
+        <div className='img-container'>
+          {/* <img src={wasmkitLogoLight} width="18%"></img> */}
+          </div>
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
