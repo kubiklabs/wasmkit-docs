@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/junokit_logo_2.png',
+  favicon: 'img/wasm_kit_logo_light.png',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -60,7 +60,7 @@ const config = {
         title: 'WasmKit',
         logo: {
           alt: 'WasmKit',
-          src: 'img/junokit_logo_2.png',
+          src: 'img/wasm_kit_logo_light.png',
         },
         items: [
           {

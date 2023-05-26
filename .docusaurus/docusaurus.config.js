@@ -10,7 +10,7 @@ export default {
   "baseUrl": "/",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
-  "favicon": "img/junokit_logo_2.png",
+  "favicon": "img/wasm_kit_logo_light.png",
   "organizationName": "arufa-research",
   "projectName": "wasmkit",
   "i18n": {
@@ -43,7 +43,7 @@ export default {
       "title": "WasmKit",
       "logo": {
         "alt": "WasmKit",
-        "src": "img/junokit_logo_2.png"
+        "src": "img/wasm_kit_logo_light.png"
       },
       "items": [
         {
