@@ -25,7 +25,7 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/uditgulati/Documents/wasmkit-docs/sidebars.js",
+          "sidebarPath": "D:\\Arufa\\wasmkit-docs\\sidebars.js",
           "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/"
         },
         "blog": {
@@ -33,23 +33,24 @@ export default {
           "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/"
         },
         "theme": {
-          "customCss": "/Users/uditgulati/Documents/wasmkit-docs/src/css/custom.css"
+          "customCss": "D:\\Arufa\\wasmkit-docs\\src\\css\\custom.css"
         }
       }
     ]
   ],
   "themeConfig": {
     "navbar": {
-      "title": "WasmKit Docs",
+      "title": "WasmKit",
       "logo": {
         "alt": "WasmKit",
         "src": "img/junokit_logo_2.png"
       },
       "items": [
         {
-          "href": "https://youtube.com",
-          "label": "Videos",
-          "position": "right"
+          "type": "docSidebar",
+          "sidebarId": "tutorialSidebar",
+          "position": "left",
+          "label": "Docs"
         },
         {
           "href": "https://github.com/arufa-research/wasmkit",
@@ -312,7 +313,7 @@ export default {
       ]
     },
     "colorMode": {
-      "defaultMode": "light",
+      "defaultMode": "dark",
       "disableSwitch": false,
       "respectPrefersColorScheme": false
     },

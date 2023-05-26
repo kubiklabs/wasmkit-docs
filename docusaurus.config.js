@@ -57,16 +57,17 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'WasmKit Docs',
+        title: 'WasmKit',
         logo: {
           alt: 'WasmKit',
           src: 'img/junokit_logo_2.png',
         },
         items: [
           {
-            href: 'https://youtube.com',
-            label: 'Videos',
-            position: 'right',
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Docs',
           },
           {
             href: 'https://github.com/arufa-research/wasmkit',
@@ -125,6 +126,11 @@ const config = {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['rust', 'json'],
       },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      }
     }),
 };
 
