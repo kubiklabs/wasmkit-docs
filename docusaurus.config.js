@@ -45,6 +45,11 @@ const config = {
         //   // Remove this to remove the "edit this page" links.
         //   editUrl: 'https://github.com/kubiklabs/wasmkit-docs/',
         // },
+        theme: {
+          customCss: [
+            require.resolve('./src/css/custom.css'),
+          ],
+        },
       }),
     ],
   ],
@@ -77,16 +82,19 @@ const config = {
           srcDark: 'img/wasm_kit_logo_light.png',
         },
         items: [
+          // left
           {
             type: 'doc',
             docId: 'introduction',
             position: 'left',
             label: 'Documentation',
           },
+          // right
           {
             href: 'https://github.com/kubiklabs/wasmkit',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
         ],
       },
@@ -138,7 +146,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['go', 'protobuf', 'rust', 'toml', 'json'],
+        additionalLanguages: ['go', 'protobuf', 'rust', 'toml', 'json', 'bash'],
       },
       colorMode: {
         defaultMode: 'dark',
