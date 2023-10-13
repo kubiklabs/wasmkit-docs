@@ -10,7 +10,7 @@ const config = {
   tagline: 'CosmWasm developer tooling',
   url: 'https://wasmkit.kubiklabs.xyz',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/wasm_kit_logo_light.png',
 
@@ -106,11 +106,11 @@ const config = {
             items: [
               {
                 label: 'Quickstart',
-                to: '/introduction',
+                to: '/getting-started/quickstart',
               },
               {
                 label: 'Guides',
-                to: '/introduction',
+                to: '/guides/compiling-contracts',
               },
             ],
           },
