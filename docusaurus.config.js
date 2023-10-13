@@ -10,7 +10,7 @@ const config = {
   tagline: 'CosmWasm developer tooling',
   url: 'https://wasmkit.kubiklabs.xyz',
   baseUrl: '/',
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/wasm_kit_logo_light.png',
 
