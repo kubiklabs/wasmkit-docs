@@ -1,58 +1,58 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/docs",
+      "path": "/",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/docs",
-          "mainDocId": "intro",
+          "path": "/",
+          "mainDocId": "introduction",
           "docs": [
             {
-              "id": "Getting-started/installation",
-              "path": "/docs/Getting-started/installation",
+              "id": "getting-started/installation",
+              "path": "/getting-started/installation",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Getting-started/overview",
-              "path": "/docs/Getting-started/overview",
+              "id": "getting-started/overview",
+              "path": "/getting-started/overview",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Getting-started/quickstart",
-              "path": "/docs/Getting-started/quickstart",
+              "id": "getting-started/quickstart",
+              "path": "/getting-started/quickstart",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Guides/compiling-contracts",
-              "path": "/docs/Guides/compiling-contracts",
+              "id": "guides/compiling-contracts",
+              "path": "/guides/compiling-contracts",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Guides/project",
-              "path": "/docs/Guides/project",
+              "id": "guides/project",
+              "path": "/guides/project",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Guides/testing",
-              "path": "/docs/Guides/testing",
+              "id": "guides/testing",
+              "path": "/guides/testing",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Guides/using-localenet",
-              "path": "/docs/Guides/using-localenet",
+              "id": "guides/using-localnet",
+              "path": "/guides/using-localnet",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "Guides/writing-scripts",
-              "path": "/docs/Guides/writing-scripts",
+              "id": "guides/writing-scripts",
+              "path": "/guides/writing-scripts",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "intro",
-              "path": "/docs/intro",
+              "id": "introduction",
+              "path": "/",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -60,8 +60,8 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/intro",
-                "label": "intro"
+                "path": "/",
+                "label": "introduction"
               }
             }
           }

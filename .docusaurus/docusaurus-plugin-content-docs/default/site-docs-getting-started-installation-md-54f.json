@@ -1,0 +1,24 @@
+{
+  "unversionedId": "getting-started/installation",
+  "id": "getting-started/installation",
+  "title": "Installation",
+  "description": "WasmKit can be installed using npm or yarn using below commands:",
+  "source": "@site/docs/getting-started/installation.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/installation",
+  "permalink": "/getting-started/installation",
+  "draft": false,
+  "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/getting-started/installation.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/getting-started/overview"
+  }
+}

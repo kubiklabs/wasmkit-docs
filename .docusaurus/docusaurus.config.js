@@ -26,17 +26,29 @@ export default {
       {
         "docs": {
           "sidebarPath": "/Users/uditgulati/Documents/wasmkit-docs/sidebars.js",
-          "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/"
-        },
-        "blog": {
-          "showReadingTime": true,
-          "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/"
-        },
-        "theme": {
-          "customCss": "/Users/uditgulati/Documents/wasmkit-docs/src/css/custom.css"
+          "routeBasePath": "/",
+          "editUrl": "https://github.com/kubiklabs/wasmkit-docs/"
         }
       }
     ]
+  ],
+  "plugins": [
+    [
+      "/Users/uditgulati/Documents/wasmkit-docs/node_modules/@easyops-cn/docusaurus-search-local/dist/server/server/index.js",
+      {
+        "indexBlog": false,
+        "docsRouteBasePath": "/",
+        "indexPages": true
+      }
+    ]
+  ],
+  "stylesheets": [
+    {
+      "href": "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
+      "type": "text/css",
+      "integrity": "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+      "crossorigin": "anonymous"
+    }
   ],
   "themeConfig": {
     "navbar": {
@@ -48,10 +60,10 @@ export default {
       },
       "items": [
         {
-          "type": "docSidebar",
-          "sidebarId": "tutorialSidebar",
+          "type": "doc",
+          "docId": "introduction",
           "position": "left",
-          "label": "Docs"
+          "label": "Documentation"
         },
         {
           "href": "https://github.com/kubiklabs/wasmkit",
@@ -69,11 +81,11 @@ export default {
           "items": [
             {
               "label": "Quickstart",
-              "to": "/docs/intro"
+              "to": "/introduction"
             },
             {
               "label": "Guides",
-              "to": "/docs/intro"
+              "to": "/introduction"
             }
           ]
         },
@@ -299,7 +311,10 @@ export default {
         ]
       },
       "additionalLanguages": [
+        "go",
+        "protobuf",
         "rust",
+        "toml",
         "json"
       ],
       "magicComments": [
@@ -337,10 +352,8 @@ export default {
     "static"
   ],
   "customFields": {},
-  "plugins": [],
   "themes": [],
   "scripts": [],
-  "stylesheets": [],
   "clientModules": [],
   "titleDelimiter": "|",
   "noIndex": false

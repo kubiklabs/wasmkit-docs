@@ -34,23 +34,36 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/', // Serve the docs at the site's root
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/kubiklabs/wasmkit-user-docs/',
+          editUrl: 'https://github.com/kubiklabs/wasmkit-docs/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/kubiklabs/wasmkit-user-docs/',
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl: 'https://github.com/kubiklabs/wasmkit-docs/',
+        // },
       }),
     ],
+  ],
+
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      { indexBlog: false, docsRouteBasePath: '/', indexPages: true },
+    ],
+  ],
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+          'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
 
   themeConfig:
@@ -65,10 +78,10 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'doc',
+            docId: 'introduction',
             position: 'left',
-            label: 'Docs',
+            label: 'Documentation',
           },
           {
             href: 'https://github.com/kubiklabs/wasmkit',
@@ -85,11 +98,11 @@ const config = {
             items: [
               {
                 label: 'Quickstart',
-                to: '/docs/intro',
+                to: '/introduction',
               },
               {
                 label: 'Guides',
-                to: '/docs/intro',
+                to: '/introduction',
               },
             ],
           },
@@ -125,7 +138,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['rust', 'json'],
+        additionalLanguages: ['go', 'protobuf', 'rust', 'toml', 'json'],
       },
       colorMode: {
         defaultMode: 'dark',

@@ -1,0 +1,20 @@
+{
+  "unversionedId": "guides/using-localnet",
+  "id": "guides/using-localnet",
+  "title": "Using localnet with wasmkit",
+  "description": "Setup the Local Developer Testnet",
+  "source": "@site/docs/guides/using-localnet.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/using-localnet",
+  "permalink": "/guides/using-localnet",
+  "draft": false,
+  "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/guides/using-localnet.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Testing contracts",
+    "permalink": "/guides/testing"
+  }
+}

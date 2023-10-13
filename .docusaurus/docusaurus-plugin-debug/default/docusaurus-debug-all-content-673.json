@@ -8,10 +8,10 @@
           "banner": null,
           "badge": false,
           "className": "docs-version-current",
-          "path": "/docs",
-          "tagsPath": "/docs/tags",
-          "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs",
-          "editUrlLocalized": "https://github.com/kubiklabs/wasmkit-user-docs/i18n/en/docusaurus-plugin-content-docs/current",
+          "path": "/",
+          "tagsPath": "/tags",
+          "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs",
+          "editUrlLocalized": "https://github.com/kubiklabs/wasmkit-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "isLast": true,
           "routePriority": -1,
           "sidebarFilePath": "/Users/uditgulati/Documents/wasmkit-docs/sidebars.js",
@@ -19,214 +19,215 @@
           "contentPathLocalized": "/Users/uditgulati/Documents/wasmkit-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
-              "unversionedId": "Getting-started/installation",
-              "id": "Getting-started/installation",
+              "unversionedId": "getting-started/installation",
+              "id": "getting-started/installation",
               "title": "Installation",
               "description": "WasmKit can be installed using npm or yarn using below commands:",
-              "source": "@site/docs/Getting-started/installation.md",
-              "sourceDirName": "Getting-started",
-              "slug": "/Getting-started/installation",
-              "permalink": "/docs/Getting-started/installation",
+              "source": "@site/docs/getting-started/installation.md",
+              "sourceDirName": "getting-started",
+              "slug": "/getting-started/installation",
+              "permalink": "/getting-started/installation",
               "draft": false,
-              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Getting-started/installation.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/getting-started/installation.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Introduction",
-                "permalink": "/docs/intro"
+                "permalink": "/"
               },
               "next": {
                 "title": "Overview",
-                "permalink": "/docs/Getting-started/overview"
+                "permalink": "/getting-started/overview"
               }
             },
             {
-              "unversionedId": "Getting-started/overview",
-              "id": "Getting-started/overview",
+              "unversionedId": "getting-started/overview",
+              "id": "getting-started/overview",
               "title": "Overview",
               "description": "WasmKit is a development framework for building juno contracts. The aim of the project is to make juno contracts development process simple, efficient and scalable. User can focus on logic of juno contract and not much about further steps in development. It facilitates features such as initiating project repo from contract templates, easy compilation of contracts, deployment, Interacting with contracts using schema and contract testing framework.",
-              "source": "@site/docs/Getting-started/overview.md",
-              "sourceDirName": "Getting-started",
-              "slug": "/Getting-started/overview",
-              "permalink": "/docs/Getting-started/overview",
+              "source": "@site/docs/getting-started/overview.md",
+              "sourceDirName": "getting-started",
+              "slug": "/getting-started/overview",
+              "permalink": "/getting-started/overview",
               "draft": false,
-              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Getting-started/overview.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/getting-started/overview.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Installation",
-                "permalink": "/docs/Getting-started/installation"
+                "permalink": "/getting-started/installation"
               },
               "next": {
                 "title": "Quick Start",
-                "permalink": "/docs/Getting-started/quickstart"
+                "permalink": "/getting-started/quickstart"
               }
             },
             {
-              "unversionedId": "Getting-started/quickstart",
-              "id": "Getting-started/quickstart",
+              "unversionedId": "getting-started/quickstart",
+              "id": "getting-started/quickstart",
               "title": "Quick Start",
               "description": "This guide will explore the basics of creating a simple WasmKit project.",
-              "source": "@site/docs/Getting-started/quickstart.md",
-              "sourceDirName": "Getting-started",
-              "slug": "/Getting-started/quickstart",
-              "permalink": "/docs/Getting-started/quickstart",
+              "source": "@site/docs/getting-started/quickstart.md",
+              "sourceDirName": "getting-started",
+              "slug": "/getting-started/quickstart",
+              "permalink": "/getting-started/quickstart",
               "draft": false,
-              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Getting-started/quickstart.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/getting-started/quickstart.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Overview",
-                "permalink": "/docs/Getting-started/overview"
+                "permalink": "/getting-started/overview"
               },
               "next": {
                 "title": "Compiling your contracts",
-                "permalink": "/docs/Guides/compiling-contracts"
+                "permalink": "/guides/compiling-contracts"
               }
             },
             {
-              "unversionedId": "Guides/compiling-contracts",
-              "id": "Guides/compiling-contracts",
+              "unversionedId": "guides/compiling-contracts",
+              "id": "guides/compiling-contracts",
               "title": "Compiling your contracts",
               "description": "Compiling contracts can be done using the command wasmkit compile.",
-              "source": "@site/docs/Guides/compiling-contracts.md",
-              "sourceDirName": "Guides",
-              "slug": "/Guides/compiling-contracts",
-              "permalink": "/docs/Guides/compiling-contracts",
+              "source": "@site/docs/guides/compiling-contracts.md",
+              "sourceDirName": "guides",
+              "slug": "/guides/compiling-contracts",
+              "permalink": "/guides/compiling-contracts",
               "draft": false,
-              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Guides/compiling-contracts.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/guides/compiling-contracts.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Quick Start",
-                "permalink": "/docs/Getting-started/quickstart"
+                "permalink": "/getting-started/quickstart"
               },
               "next": {
                 "title": "Setting up a project",
-                "permalink": "/docs/Guides/project"
+                "permalink": "/guides/project"
               }
             },
             {
-              "unversionedId": "Guides/project",
-              "id": "Guides/project",
+              "unversionedId": "guides/project",
+              "id": "guides/project",
               "title": "Setting up a project",
               "description": "Project setup can be broken down to 3 steps broadly, which are boiler plate generation, updating project name and updating wasmkit.config.js file.",
-              "source": "@site/docs/Guides/project.md",
-              "sourceDirName": "Guides",
-              "slug": "/Guides/project",
-              "permalink": "/docs/Guides/project",
+              "source": "@site/docs/guides/project.md",
+              "sourceDirName": "guides",
+              "slug": "/guides/project",
+              "permalink": "/guides/project",
               "draft": false,
-              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Guides/project.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/guides/project.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Compiling your contracts",
-                "permalink": "/docs/Guides/compiling-contracts"
+                "permalink": "/guides/compiling-contracts"
               },
               "next": {
-                "title": "Testing contracts",
-                "permalink": "/docs/Guides/testing"
+                "title": "Writing scripts",
+                "permalink": "/guides/writing-scripts"
               }
             },
             {
-              "unversionedId": "Guides/testing",
-              "id": "Guides/testing",
+              "unversionedId": "guides/testing",
+              "id": "guides/testing",
               "title": "Testing contracts",
               "description": "Contracts can be tested in two ways, one by writing rust tests in the contract.rs file itself, and other way is to write a mocha test script that interacts with deployed contract and assert the returned values. There are examples for both in the sample-project created after wasmkit init step.",
-              "source": "@site/docs/Guides/testing.md",
-              "sourceDirName": "Guides",
-              "slug": "/Guides/testing",
-              "permalink": "/docs/Guides/testing",
+              "source": "@site/docs/guides/testing.md",
+              "sourceDirName": "guides",
+              "slug": "/guides/testing",
+              "permalink": "/guides/testing",
               "draft": false,
-              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Guides/testing.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/guides/testing.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Writing scripts",
+                "permalink": "/guides/writing-scripts"
+              },
+              "next": {
+                "title": "Using localnet with wasmkit",
+                "permalink": "/guides/using-localnet"
+              }
+            },
+            {
+              "unversionedId": "guides/using-localnet",
+              "id": "guides/using-localnet",
+              "title": "Using localnet with wasmkit",
+              "description": "Setup the Local Developer Testnet",
+              "source": "@site/docs/guides/using-localnet.md",
+              "sourceDirName": "guides",
+              "slug": "/guides/using-localnet",
+              "permalink": "/guides/using-localnet",
+              "draft": false,
+              "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/guides/using-localnet.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Testing contracts",
+                "permalink": "/guides/testing"
+              }
+            },
+            {
+              "unversionedId": "guides/writing-scripts",
+              "id": "guides/writing-scripts",
+              "title": "Writing scripts",
+              "description": "Sample script walkthrough",
+              "source": "@site/docs/guides/writing-scripts.md",
+              "sourceDirName": "guides",
+              "slug": "/guides/writing-scripts",
+              "permalink": "/guides/writing-scripts",
+              "draft": false,
+              "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/guides/writing-scripts.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Setting up a project",
-                "permalink": "/docs/Guides/project"
+                "permalink": "/guides/project"
               },
               "next": {
-                "title": "Using localnet with wasmkit",
-                "permalink": "/docs/Guides/using-localenet"
-              }
-            },
-            {
-              "unversionedId": "Guides/using-localenet",
-              "id": "Guides/using-localenet",
-              "title": "Using localnet with wasmkit",
-              "description": "Setup the Local Developer Testnet",
-              "source": "@site/docs/Guides/using-localenet.md",
-              "sourceDirName": "Guides",
-              "slug": "/Guides/using-localenet",
-              "permalink": "/docs/Guides/using-localenet",
-              "draft": false,
-              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Guides/using-localenet.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {},
-              "sidebar": "tutorialSidebar",
-              "previous": {
                 "title": "Testing contracts",
-                "permalink": "/docs/Guides/testing"
-              },
-              "next": {
-                "title": "Writing scripts",
-                "permalink": "/docs/Guides/writing-scripts"
+                "permalink": "/guides/testing"
               }
             },
             {
-              "unversionedId": "Guides/writing-scripts",
-              "id": "Guides/writing-scripts",
-              "title": "Writing scripts",
-              "description": "Sample script walkthrough",
-              "source": "@site/docs/Guides/writing-scripts.md",
-              "sourceDirName": "Guides",
-              "slug": "/Guides/writing-scripts",
-              "permalink": "/docs/Guides/writing-scripts",
-              "draft": false,
-              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Guides/writing-scripts.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {},
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Using localnet with wasmkit",
-                "permalink": "/docs/Guides/using-localenet"
-              }
-            },
-            {
-              "unversionedId": "intro",
-              "id": "intro",
+              "unversionedId": "introduction",
+              "id": "introduction",
               "title": "Introduction",
               "description": "This section gives overview of the most comman use cases. Read Getting-started and Guides sections for a detailed documentation.",
-              "source": "@site/docs/intro.md",
+              "source": "@site/docs/introduction.md",
               "sourceDirName": ".",
-              "slug": "/intro",
-              "permalink": "/docs/intro",
+              "slug": "/",
+              "permalink": "/",
               "draft": false,
-              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/intro.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/introduction.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
               "frontMatter": {
+                "slug": "/",
                 "sidebar_position": 1
               },
               "sidebar": "tutorialSidebar",
               "next": {
                 "title": "Installation",
-                "permalink": "/docs/Getting-started/installation"
+                "permalink": "/getting-started/installation"
               }
             }
           ],
@@ -235,55 +236,55 @@
             "tutorialSidebar": [
               {
                 "type": "doc",
-                "id": "intro"
+                "id": "introduction"
               },
               {
+                "label": "Getting started",
                 "type": "category",
-                "label": "Getting-started",
-                "collapsible": true,
-                "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
-                    "id": "Getting-started/installation"
+                    "id": "getting-started/installation"
                   },
                   {
                     "type": "doc",
-                    "id": "Getting-started/overview"
+                    "id": "getting-started/overview"
                   },
                   {
                     "type": "doc",
-                    "id": "Getting-started/quickstart"
+                    "id": "getting-started/quickstart"
                   }
-                ]
+                ],
+                "collapsed": true,
+                "collapsible": true
               },
               {
-                "type": "category",
                 "label": "Guides",
-                "collapsible": true,
-                "collapsed": true,
+                "type": "category",
                 "items": [
                   {
                     "type": "doc",
-                    "id": "Guides/compiling-contracts"
+                    "id": "guides/compiling-contracts"
                   },
                   {
                     "type": "doc",
-                    "id": "Guides/project"
+                    "id": "guides/project"
                   },
                   {
                     "type": "doc",
-                    "id": "Guides/testing"
+                    "id": "guides/writing-scripts"
                   },
                   {
                     "type": "doc",
-                    "id": "Guides/using-localenet"
+                    "id": "guides/testing"
                   },
                   {
                     "type": "doc",
-                    "id": "Guides/writing-scripts"
+                    "id": "guides/using-localnet"
                   }
-                ]
+                ],
+                "collapsed": true,
+                "collapsible": true
               }
             ]
           }
@@ -299,7 +300,6 @@
           "id": "welcome",
           "metadata": {
             "permalink": "/blog/welcome",
-            "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/blog/2021-08-26-welcome/index.md",
             "source": "@site/blog/2021-08-26-welcome/index.md",
             "title": "Welcome",
             "description": "Docusaurus blogging features are powered by the blog plugin.",
@@ -361,7 +361,6 @@
           "id": "mdx-blog-post",
           "metadata": {
             "permalink": "/blog/mdx-blog-post",
-            "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/blog/2021-08-01-mdx-blog-post.mdx",
             "source": "@site/blog/2021-08-01-mdx-blog-post.mdx",
             "title": "MDX Blog Post",
             "description": "Blog posts support Docusaurus Markdown features, such as MDX.",
@@ -409,7 +408,6 @@
           "id": "long-blog-post",
           "metadata": {
             "permalink": "/blog/long-blog-post",
-            "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/blog/2019-05-29-long-blog-post.md",
             "source": "@site/blog/2019-05-29-long-blog-post.md",
             "title": "Long Blog Post",
             "description": "This is the summary of a very long blog post,",
@@ -460,7 +458,6 @@
           "id": "first-blog-post",
           "metadata": {
             "permalink": "/blog/first-blog-post",
-            "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/blog/2019-05-28-first-blog-post.md",
             "source": "@site/blog/2019-05-28-first-blog-post.md",
             "title": "First Blog Post",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet",
@@ -635,26 +632,11 @@
     }
   },
   "docusaurus-plugin-content-pages": {
-    "default": [
-      {
-        "type": "jsx",
-        "permalink": "/",
-        "source": "@site/src/pages/index.js"
-      },
-      {
-        "type": "mdx",
-        "permalink": "/markdown-page",
-        "source": "@site/src/pages/markdown-page.md",
-        "title": "Markdown page example",
-        "description": "You don't need React to write simple standalone pages.",
-        "frontMatter": {
-          "title": "Markdown page example"
-        }
-      }
-    ]
+    "default": null
   },
   "docusaurus-plugin-debug": {},
   "docusaurus-theme-classic": {},
+  "@easyops-cn/docusaurus-search-local": {},
   "docusaurus-bootstrap-plugin": {},
   "docusaurus-mdx-fallback-plugin": {}
 }

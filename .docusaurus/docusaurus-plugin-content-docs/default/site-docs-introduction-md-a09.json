@@ -1,0 +1,24 @@
+{
+  "unversionedId": "introduction",
+  "id": "introduction",
+  "title": "Introduction",
+  "description": "This section gives overview of the most comman use cases. Read Getting-started and Guides sections for a detailed documentation.",
+  "source": "@site/docs/introduction.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/",
+  "draft": false,
+  "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Installation",
+    "permalink": "/getting-started/installation"
+  }
+}

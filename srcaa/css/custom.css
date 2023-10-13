@@ -47,7 +47,7 @@
   --ifm-color-primary-light: #33925D;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3CAD6E;
-  --ifm-background-color: #ffffff;
+  --ifm-background-color: var(--ifm-code-background);
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --wasmkit-logo: url(../../static/img/wasm_kit_logo_dark.png);
@@ -133,9 +133,9 @@ background-color: transparent !important;
 }
 
 .button--secondary{
-   background-color: transparent;
-   color: var(--ifm-primary-font) !important;
-   border-color: var(--ifm-primary-font) !important;
+  background-color: transparent;
+  color: var(--ifm-primary-font) !important;
+  border-color: var(--ifm-primary-font) !important;
 }
 .footer a{
   color: var(--ifm-primary-font) !important;
@@ -145,15 +145,21 @@ background-color: transparent !important;
  
 }
 
-.language-json{
- 
-    background-color: var(--ifm-code-background) !important;
-    border: 0.1rem solid rgba(0, 0, 0, 0.1) !important;
+.language-bash{
+  background-color: var(--ifm-code-background) !important;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1) !important;
 }
 .language-rust{
- 
-    background-color: var(--ifm-code-background) !important;
-    border: 0.1rem solid rgba(0, 0, 0, 0.1) !important;
+  background-color: var(--ifm-code-background) !important;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1) !important;
+}
+.language-js{
+  background-color: var(--ifm-code-background) !important;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1) !important;
+}
+.language-json{
+  background-color: var(--ifm-code-background) !important;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1) !important;
 }
 
 .theme-doc-markdown img{

@@ -93,74 +93,69 @@ export default [
     exact: true
   },
   {
-    path: '/markdown-page',
-    component: ComponentCreator('/markdown-page', '9de'),
+    path: '/search',
+    component: ComponentCreator('/search', '791'),
     exact: true
   },
   {
-    path: '/docs',
-    component: ComponentCreator('/docs', '98e'),
+    path: '/',
+    component: ComponentCreator('/', 'f79'),
     routes: [
       {
-        path: '/docs/Getting-started/installation',
-        component: ComponentCreator('/docs/Getting-started/installation', '091'),
+        path: '/',
+        component: ComponentCreator('/', '0d0'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/Getting-started/overview',
-        component: ComponentCreator('/docs/Getting-started/overview', 'e6b'),
+        path: '/getting-started/installation',
+        component: ComponentCreator('/getting-started/installation', '43c'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/Getting-started/quickstart',
-        component: ComponentCreator('/docs/Getting-started/quickstart', '5ee'),
+        path: '/getting-started/overview',
+        component: ComponentCreator('/getting-started/overview', '64d'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/Guides/compiling-contracts',
-        component: ComponentCreator('/docs/Guides/compiling-contracts', '0ef'),
+        path: '/getting-started/quickstart',
+        component: ComponentCreator('/getting-started/quickstart', 'a80'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/Guides/project',
-        component: ComponentCreator('/docs/Guides/project', '7ea'),
+        path: '/guides/compiling-contracts',
+        component: ComponentCreator('/guides/compiling-contracts', '4b4'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/Guides/testing',
-        component: ComponentCreator('/docs/Guides/testing', '5db'),
+        path: '/guides/project',
+        component: ComponentCreator('/guides/project', 'f42'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/Guides/using-localenet',
-        component: ComponentCreator('/docs/Guides/using-localenet', '9b0'),
+        path: '/guides/testing',
+        component: ComponentCreator('/guides/testing', '0a1'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/Guides/writing-scripts',
-        component: ComponentCreator('/docs/Guides/writing-scripts', '783'),
+        path: '/guides/using-localnet',
+        component: ComponentCreator('/guides/using-localnet', 'cde'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/docs/intro',
-        component: ComponentCreator('/docs/intro', 'aed'),
+        path: '/guides/writing-scripts',
+        component: ComponentCreator('/guides/writing-scripts', '3d1'),
         exact: true,
         sidebar: "tutorialSidebar"
       }
     ]
-  },
-  {
-    path: '/',
-    component: ComponentCreator('/', '39e'),
-    exact: true
   },
   {
     path: '*',

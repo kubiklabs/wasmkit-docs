@@ -6,19 +6,19 @@
   "source": "@site/docs/guides/testing.md",
   "sourceDirName": "guides",
   "slug": "/guides/testing",
-  "permalink": "/docs/guides/testing",
+  "permalink": "/guides/testing",
   "draft": false,
-  "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/guides/testing.md",
+  "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/guides/testing.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Setting up a project",
-    "permalink": "/docs/guides/project"
+    "title": "Writing scripts",
+    "permalink": "/guides/writing-scripts"
   },
   "next": {
     "title": "Using localnet with wasmkit",
-    "permalink": "/docs/guides/using-localenet"
+    "permalink": "/guides/using-localnet"
   }
 }

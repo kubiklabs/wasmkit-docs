@@ -6,19 +6,19 @@
   "source": "@site/docs/guides/compiling-contracts.md",
   "sourceDirName": "guides",
   "slug": "/guides/compiling-contracts",
-  "permalink": "/docs/guides/compiling-contracts",
+  "permalink": "/guides/compiling-contracts",
   "draft": false,
-  "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/guides/compiling-contracts.md",
+  "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/guides/compiling-contracts.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Quick Start",
-    "permalink": "/docs/Getting-started/quickstart"
+    "permalink": "/getting-started/quickstart"
   },
   "next": {
     "title": "Setting up a project",
-    "permalink": "/docs/guides/project"
+    "permalink": "/guides/project"
   }
 }

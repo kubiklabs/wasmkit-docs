@@ -179,61 +179,53 @@
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-welcomed-9-f-ffb"
   },
-  "/markdown-page-9de": {
-    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+  "/search-791": {
+    "__comp": "__comp---theme-search-page-1-a-4-d6f",
     "__context": {
-      "plugin": "plugin---markdown-page-3-cd-6e1"
-    },
-    "content": "content---markdown-page-393-028"
+      "plugin": "plugin---searchab-7-75b"
+    }
   },
-  "/docs-98e": {
+  "/-f79": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "plugin---docscdc-7e5"
+      "plugin": "plugin---cdc-6af"
     },
-    "versionMetadata": "versionMetadata---docs-935-398"
+    "versionMetadata": "versionMetadata---935-fcf"
   },
-  "/docs/Getting-started/installation-091": {
+  "/-0d0": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-getting-started-installation-93-b-e96"
+    "content": "content---introductiona-09-926"
   },
-  "/docs/Getting-started/overview-e6b": {
+  "/getting-started/installation-43c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-getting-started-overview-28-b-249"
+    "content": "content---getting-started-installation-54-f-988"
   },
-  "/docs/Getting-started/quickstart-5ee": {
+  "/getting-started/overview-64d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-getting-started-quickstartd-02-848"
+    "content": "content---getting-started-overview-7-a-9-b77"
   },
-  "/docs/Guides/compiling-contracts-0ef": {
+  "/getting-started/quickstart-a80": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-guides-compiling-contractscdc-ee1"
+    "content": "content---getting-started-quickstartfbd-45d"
   },
-  "/docs/Guides/project-7ea": {
+  "/guides/compiling-contracts-4b4": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-guides-projectc-23-4c5"
+    "content": "content---guides-compiling-contractsfc-7-8ca"
   },
-  "/docs/Guides/testing-5db": {
+  "/guides/project-f42": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-guides-testingab-8-40e"
+    "content": "content---guides-projectad-9-8ce"
   },
-  "/docs/Guides/using-localenet-9b0": {
+  "/guides/testing-0a1": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-guides-using-localenet-5-ed-749"
+    "content": "content---guides-testinge-44-b1b"
   },
-  "/docs/Guides/writing-scripts-783": {
+  "/guides/using-localnet-cde": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-guides-writing-scriptsc-8-d-244"
+    "content": "content---guides-using-localnetc-10-78e"
   },
-  "/docs/intro-aed": {
+  "/guides/writing-scripts-3d1": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-intro-0-e-3-be1"
-  },
-  "/-39e": {
-    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
-    "__context": {
-      "plugin": "plugin---markdown-page-3-cd-6e1"
-    },
-    "config": "config---5-e-9-4f3"
+    "content": "content---guides-writing-scripts-619-889"
   }
 }

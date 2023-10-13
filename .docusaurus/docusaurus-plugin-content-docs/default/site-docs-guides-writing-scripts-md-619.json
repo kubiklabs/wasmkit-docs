@@ -6,15 +6,19 @@
   "source": "@site/docs/guides/writing-scripts.md",
   "sourceDirName": "guides",
   "slug": "/guides/writing-scripts",
-  "permalink": "/docs/guides/writing-scripts",
+  "permalink": "/guides/writing-scripts",
   "draft": false,
-  "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/guides/writing-scripts.md",
+  "editUrl": "https://github.com/kubiklabs/wasmkit-docs/docs/guides/writing-scripts.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Using localnet with wasmkit",
-    "permalink": "/docs/guides/using-localenet"
+    "title": "Setting up a project",
+    "permalink": "/guides/project"
+  },
+  "next": {
+    "title": "Testing contracts",
+    "permalink": "/guides/testing"
   }
 }
