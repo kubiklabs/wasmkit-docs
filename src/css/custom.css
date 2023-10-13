@@ -40,18 +40,18 @@
 /* You can override the default Infima variables here. */
 
 :root {
-  --ifm-primary-font: black;
-  --ifm-color-primary: #0ecc07;
-  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary: #2E8555;
+  --ifm-color-primary-dark: #29784C;
   --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-darkest: #205D3B;
+  --ifm-color-primary-light: #33925D;
   --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary-lightest: #3CAD6E;
+  --ifm-background-color: #ffffff;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --wasmkit-logo: url(../../static/img/wasm_kit_logo_dark.png);
-  --bg-img: url(../../static/img/bg_light.png);
+  /* --bg-img: url(../../static/img/bg_light.png); */
   --ifm-standard-font-family: "Rajdhani", Manrope, Poppins, Inter,
     PingFangSC-Regular, "Microsoft YaHei", sans-serif;
 }
@@ -66,9 +66,10 @@
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
+  --ifm-background-color: #1b1b1d;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --wasmkit-logo: url(../../static/img/wasm_kit_logo_light.png);
-  --bg-img: url(../../static/img/bg_dark.png);
+  /* --bg-img: url(../../static/img/bg_dark.png); */
   --ifm-standard-font-family: "Rajdhani", Manrope, Poppins, Inter,
     PingFangSC-Regular, "Microsoft YaHei", sans-serif;
 }
@@ -95,12 +96,6 @@ body{
 .main-wrapper{
   background-color: transparent !important;
 }
-.navbar{
-  /* background-image: var(--bg-img) !important;
-    background-repeat: no-repeat;
-  background-size: cover; */
-  background-color: transparent !important;
-}
 .navbar::before {
   content: "";
   position: absolute;
@@ -108,7 +103,6 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.6) for desired darkness */
   z-index: -1;
 }
 .navbar-sidebar{

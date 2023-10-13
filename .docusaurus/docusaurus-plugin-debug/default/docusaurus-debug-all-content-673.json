@@ -10,13 +10,13 @@
           "className": "docs-version-current",
           "path": "/docs",
           "tagsPath": "/docs/tags",
-          "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs",
-          "editUrlLocalized": "https://github.com/arufa-research/wasmkit-user-docs/i18n/en/docusaurus-plugin-content-docs/current",
+          "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs",
+          "editUrlLocalized": "https://github.com/kubiklabs/wasmkit-user-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "D:\\Arufa\\wasmkit-docs\\sidebars.js",
-          "contentPath": "D:\\Arufa\\wasmkit-docs\\docs",
-          "contentPathLocalized": "D:\\Arufa\\wasmkit-docs\\i18n\\en\\docusaurus-plugin-content-docs\\current",
+          "sidebarFilePath": "/Users/uditgulati/Documents/wasmkit-docs/sidebars.js",
+          "contentPath": "/Users/uditgulati/Documents/wasmkit-docs/docs",
+          "contentPathLocalized": "/Users/uditgulati/Documents/wasmkit-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "Getting-started/installation",
@@ -28,7 +28,7 @@
               "slug": "/Getting-started/installation",
               "permalink": "/docs/Getting-started/installation",
               "draft": false,
-              "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/Getting-started/installation.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Getting-started/installation.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -52,7 +52,7 @@
               "slug": "/Getting-started/overview",
               "permalink": "/docs/Getting-started/overview",
               "draft": false,
-              "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/Getting-started/overview.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Getting-started/overview.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -76,7 +76,7 @@
               "slug": "/Getting-started/quickstart",
               "permalink": "/docs/Getting-started/quickstart",
               "draft": false,
-              "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/Getting-started/quickstart.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Getting-started/quickstart.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -87,20 +87,20 @@
               },
               "next": {
                 "title": "Compiling your contracts",
-                "permalink": "/docs/guides/compiling-contracts"
+                "permalink": "/docs/Guides/compiling-contracts"
               }
             },
             {
-              "unversionedId": "guides/compiling-contracts",
-              "id": "guides/compiling-contracts",
+              "unversionedId": "Guides/compiling-contracts",
+              "id": "Guides/compiling-contracts",
               "title": "Compiling your contracts",
               "description": "Compiling contracts can be done using the command wasmkit compile.",
-              "source": "@site/docs/guides/compiling-contracts.md",
-              "sourceDirName": "guides",
-              "slug": "/guides/compiling-contracts",
-              "permalink": "/docs/guides/compiling-contracts",
+              "source": "@site/docs/Guides/compiling-contracts.md",
+              "sourceDirName": "Guides",
+              "slug": "/Guides/compiling-contracts",
+              "permalink": "/docs/Guides/compiling-contracts",
               "draft": false,
-              "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/guides/compiling-contracts.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Guides/compiling-contracts.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -111,99 +111,99 @@
               },
               "next": {
                 "title": "Setting up a project",
-                "permalink": "/docs/guides/project"
+                "permalink": "/docs/Guides/project"
               }
             },
             {
-              "unversionedId": "guides/project",
-              "id": "guides/project",
+              "unversionedId": "Guides/project",
+              "id": "Guides/project",
               "title": "Setting up a project",
               "description": "Project setup can be broken down to 3 steps broadly, which are boiler plate generation, updating project name and updating wasmkit.config.js file.",
-              "source": "@site/docs/guides/project.md",
-              "sourceDirName": "guides",
-              "slug": "/guides/project",
-              "permalink": "/docs/guides/project",
+              "source": "@site/docs/Guides/project.md",
+              "sourceDirName": "Guides",
+              "slug": "/Guides/project",
+              "permalink": "/docs/Guides/project",
               "draft": false,
-              "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/guides/project.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Guides/project.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Compiling your contracts",
-                "permalink": "/docs/guides/compiling-contracts"
+                "permalink": "/docs/Guides/compiling-contracts"
               },
               "next": {
                 "title": "Testing contracts",
-                "permalink": "/docs/guides/testing"
+                "permalink": "/docs/Guides/testing"
               }
             },
             {
-              "unversionedId": "guides/testing",
-              "id": "guides/testing",
+              "unversionedId": "Guides/testing",
+              "id": "Guides/testing",
               "title": "Testing contracts",
               "description": "Contracts can be tested in two ways, one by writing rust tests in the contract.rs file itself, and other way is to write a mocha test script that interacts with deployed contract and assert the returned values. There are examples for both in the sample-project created after wasmkit init step.",
-              "source": "@site/docs/guides/testing.md",
-              "sourceDirName": "guides",
-              "slug": "/guides/testing",
-              "permalink": "/docs/guides/testing",
+              "source": "@site/docs/Guides/testing.md",
+              "sourceDirName": "Guides",
+              "slug": "/Guides/testing",
+              "permalink": "/docs/Guides/testing",
               "draft": false,
-              "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/guides/testing.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Guides/testing.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Setting up a project",
-                "permalink": "/docs/guides/project"
+                "permalink": "/docs/Guides/project"
               },
               "next": {
                 "title": "Using localnet with wasmkit",
-                "permalink": "/docs/guides/using-localenet"
+                "permalink": "/docs/Guides/using-localenet"
               }
             },
             {
-              "unversionedId": "guides/using-localenet",
-              "id": "guides/using-localenet",
+              "unversionedId": "Guides/using-localenet",
+              "id": "Guides/using-localenet",
               "title": "Using localnet with wasmkit",
               "description": "Setup the Local Developer Testnet",
-              "source": "@site/docs/guides/using-localenet.md",
-              "sourceDirName": "guides",
-              "slug": "/guides/using-localenet",
-              "permalink": "/docs/guides/using-localenet",
+              "source": "@site/docs/Guides/using-localenet.md",
+              "sourceDirName": "Guides",
+              "slug": "/Guides/using-localenet",
+              "permalink": "/docs/Guides/using-localenet",
               "draft": false,
-              "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/guides/using-localenet.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Guides/using-localenet.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Testing contracts",
-                "permalink": "/docs/guides/testing"
+                "permalink": "/docs/Guides/testing"
               },
               "next": {
                 "title": "Writing scripts",
-                "permalink": "/docs/guides/writing-scripts"
+                "permalink": "/docs/Guides/writing-scripts"
               }
             },
             {
-              "unversionedId": "guides/writing-scripts",
-              "id": "guides/writing-scripts",
+              "unversionedId": "Guides/writing-scripts",
+              "id": "Guides/writing-scripts",
               "title": "Writing scripts",
               "description": "Sample script walkthrough",
-              "source": "@site/docs/guides/writing-scripts.md",
-              "sourceDirName": "guides",
-              "slug": "/guides/writing-scripts",
-              "permalink": "/docs/guides/writing-scripts",
+              "source": "@site/docs/Guides/writing-scripts.md",
+              "sourceDirName": "Guides",
+              "slug": "/Guides/writing-scripts",
+              "permalink": "/docs/Guides/writing-scripts",
               "draft": false,
-              "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/guides/writing-scripts.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Guides/writing-scripts.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
                 "title": "Using localnet with wasmkit",
-                "permalink": "/docs/guides/using-localenet"
+                "permalink": "/docs/Guides/using-localenet"
               }
             },
             {
@@ -216,7 +216,7 @@
               "slug": "/intro",
               "permalink": "/docs/intro",
               "draft": false,
-              "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/intro.md",
+              "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/intro.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -259,29 +259,29 @@
               },
               {
                 "type": "category",
-                "label": "guides",
+                "label": "Guides",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
-                    "id": "guides/compiling-contracts"
+                    "id": "Guides/compiling-contracts"
                   },
                   {
                     "type": "doc",
-                    "id": "guides/project"
+                    "id": "Guides/project"
                   },
                   {
                     "type": "doc",
-                    "id": "guides/testing"
+                    "id": "Guides/testing"
                   },
                   {
                     "type": "doc",
-                    "id": "guides/using-localenet"
+                    "id": "Guides/using-localenet"
                   },
                   {
                     "type": "doc",
-                    "id": "guides/writing-scripts"
+                    "id": "Guides/writing-scripts"
                   }
                 ]
               }
@@ -299,7 +299,7 @@
           "id": "welcome",
           "metadata": {
             "permalink": "/blog/welcome",
-            "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/blog/2021-08-26-welcome/index.md",
+            "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/blog/2021-08-26-welcome/index.md",
             "source": "@site/blog/2021-08-26-welcome/index.md",
             "title": "Welcome",
             "description": "Docusaurus blogging features are powered by the blog plugin.",
@@ -355,13 +355,13 @@
               "permalink": "/blog/mdx-blog-post"
             }
           },
-          "content": "[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).\r\n\r\nSimply add Markdown files (or folders) to the `blog` directory.\r\n\r\nRegular blog authors can be added to `authors.yml`.\r\n\r\nThe blog post date can be extracted from filenames, such as:\r\n\r\n- `2019-05-30-welcome.md`\r\n- `2019-05-30-welcome/index.md`\r\n\r\nA blog post folder can be convenient to co-locate blog post images:\r\n\r\n![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)\r\n\r\nThe blog supports tags as well!\r\n\r\n**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config."
+          "content": "[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).\n\nSimply add Markdown files (or folders) to the `blog` directory.\n\nRegular blog authors can be added to `authors.yml`.\n\nThe blog post date can be extracted from filenames, such as:\n\n- `2019-05-30-welcome.md`\n- `2019-05-30-welcome/index.md`\n\nA blog post folder can be convenient to co-locate blog post images:\n\n![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)\n\nThe blog supports tags as well!\n\n**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config."
         },
         {
           "id": "mdx-blog-post",
           "metadata": {
             "permalink": "/blog/mdx-blog-post",
-            "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/blog/2021-08-01-mdx-blog-post.mdx",
+            "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/blog/2021-08-01-mdx-blog-post.mdx",
             "source": "@site/blog/2021-08-01-mdx-blog-post.mdx",
             "title": "MDX Blog Post",
             "description": "Blog posts support Docusaurus Markdown features, such as MDX.",
@@ -403,13 +403,13 @@
               "permalink": "/blog/long-blog-post"
             }
           },
-          "content": "Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).\r\n\r\n:::tip\r\n\r\nUse the power of React to create interactive blog posts.\r\n\r\n```js\r\n<button onClick={() => alert('button clicked!')}>Click me!</button>\r\n```\r\n\r\n<button onClick={() => alert('button clicked!')}>Click me!</button>\r\n\r\n:::"
+          "content": "Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).\n\n:::tip\n\nUse the power of React to create interactive blog posts.\n\n```js\n<button onClick={() => alert('button clicked!')}>Click me!</button>\n```\n\n<button onClick={() => alert('button clicked!')}>Click me!</button>\n\n:::"
         },
         {
           "id": "long-blog-post",
           "metadata": {
             "permalink": "/blog/long-blog-post",
-            "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/blog/2019-05-29-long-blog-post.md",
+            "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/blog/2019-05-29-long-blog-post.md",
             "source": "@site/blog/2019-05-29-long-blog-post.md",
             "title": "Long Blog Post",
             "description": "This is the summary of a very long blog post,",
@@ -454,13 +454,13 @@
               "permalink": "/blog/first-blog-post"
             }
           },
-          "content": "This is the summary of a very long blog post,\r\n\r\nUse a `<!--` `truncate` `-->` comment to limit blog post size in the list view.\r\n\r\n<!--truncate-->\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
+          "content": "This is the summary of a very long blog post,\n\nUse a `<!--` `truncate` `-->` comment to limit blog post size in the list view.\n\n<!--truncate-->\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
         },
         {
           "id": "first-blog-post",
           "metadata": {
             "permalink": "/blog/first-blog-post",
-            "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/blog/2019-05-28-first-blog-post.md",
+            "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/blog/2019-05-28-first-blog-post.md",
             "source": "@site/blog/2019-05-28-first-blog-post.md",
             "title": "First Blog Post",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet",

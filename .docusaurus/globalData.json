@@ -26,28 +26,28 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "guides/compiling-contracts",
-              "path": "/docs/guides/compiling-contracts",
+              "id": "Guides/compiling-contracts",
+              "path": "/docs/Guides/compiling-contracts",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "guides/project",
-              "path": "/docs/guides/project",
+              "id": "Guides/project",
+              "path": "/docs/Guides/project",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "guides/testing",
-              "path": "/docs/guides/testing",
+              "id": "Guides/testing",
+              "path": "/docs/Guides/testing",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "guides/using-localenet",
-              "path": "/docs/guides/using-localenet",
+              "id": "Guides/using-localenet",
+              "path": "/docs/Guides/using-localenet",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "guides/writing-scripts",
-              "path": "/docs/guides/writing-scripts",
+              "id": "Guides/writing-scripts",
+              "path": "/docs/Guides/writing-scripts",
               "sidebar": "tutorialSidebar"
             },
             {

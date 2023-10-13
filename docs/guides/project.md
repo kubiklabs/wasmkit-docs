@@ -6,7 +6,7 @@ Project setup can be broken down to 3 steps broadly, which are boiler plate gene
 
 ## Boilerplate code
 
-Use command `wasmkit init <project-name>` to generate boilerplate code. Use command `wasmkit init <project-name> <template-name>` to generate boilerplate code using a particular template (template names can be found from repository `https://github.com/arufa-research/wasmkit-templates`).
+Use command `wasmkit init <project-name>` to generate boilerplate code. Use command `wasmkit init <project-name> <template-name>` to generate boilerplate code using a particular template (template names can be found from repository `https://github.com/kubiklabs/wasmkit-templates`).
 
 ```bash
 $ wasmkit init yellow

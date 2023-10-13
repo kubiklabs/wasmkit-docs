@@ -8,7 +8,7 @@
   "slug": "/Getting-started/quickstart",
   "permalink": "/docs/Getting-started/quickstart",
   "draft": false,
-  "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/docs/Getting-started/quickstart.md",
+  "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/docs/Getting-started/quickstart.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
@@ -19,6 +19,6 @@
   },
   "next": {
     "title": "Compiling your contracts",
-    "permalink": "/docs/guides/compiling-contracts"
+    "permalink": "/docs/Guides/compiling-contracts"
   }
 }

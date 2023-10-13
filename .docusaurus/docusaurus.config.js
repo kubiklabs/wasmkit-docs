@@ -6,12 +6,12 @@
 export default {
   "title": "WasmKit",
   "tagline": "CosmWasm developer tooling",
-  "url": "https://wasmkit.arufaresearch.com",
+  "url": "https://wasmkit.kubiklabs.xyz",
   "baseUrl": "/",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
   "favicon": "img/wasm_kit_logo_light.png",
-  "organizationName": "arufa-research",
+  "organizationName": "kubiklabs",
   "projectName": "wasmkit",
   "i18n": {
     "defaultLocale": "en",
@@ -25,15 +25,15 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "D:\\Arufa\\wasmkit-docs\\sidebars.js",
-          "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/"
+          "sidebarPath": "/Users/uditgulati/Documents/wasmkit-docs/sidebars.js",
+          "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/"
         },
         "blog": {
           "showReadingTime": true,
-          "editUrl": "https://github.com/arufa-research/wasmkit-user-docs/"
+          "editUrl": "https://github.com/kubiklabs/wasmkit-user-docs/"
         },
         "theme": {
-          "customCss": "D:\\Arufa\\wasmkit-docs\\src\\css\\custom.css"
+          "customCss": "/Users/uditgulati/Documents/wasmkit-docs/src/css/custom.css"
         }
       }
     ]
@@ -43,7 +43,8 @@ export default {
       "title": "WasmKit",
       "logo": {
         "alt": "WasmKit",
-        "src": "img/wasm_kit_logo_light.png"
+        "src": "img/wasm_kit_logo_dark.png",
+        "srcDark": "img/wasm_kit_logo_light.png"
       },
       "items": [
         {
@@ -53,7 +54,7 @@ export default {
           "label": "Docs"
         },
         {
-          "href": "https://github.com/arufa-research/wasmkit",
+          "href": "https://github.com/kubiklabs/wasmkit",
           "label": "GitHub",
           "position": "right"
         }
@@ -85,7 +86,7 @@ export default {
             },
             {
               "label": "Twitter",
-              "href": "https://twitter.com/arufaresearch"
+              "href": "https://twitter.com/kubiklabsxyz"
             }
           ]
         },
@@ -94,16 +95,16 @@ export default {
           "items": [
             {
               "label": "Blog",
-              "href": "https://arufaresearch.medium.com"
+              "href": "https://kubiklabs.medium.com"
             },
             {
               "label": "GitHub",
-              "href": "https://github.com/arufa-research/wasmkit"
+              "href": "https://github.com/kubiklabs/wasmkit"
             }
           ]
         }
       ],
-      "copyright": "Copyright © 2023 Arufa Research,  Built with Docusaurus."
+      "copyright": "Copyright © 2023 KubikLabs.xyz,  Built with Docusaurus."
     },
     "prism": {
       "theme": {

@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'WasmKit',
   tagline: 'CosmWasm developer tooling',
-  url: 'https://wasmkit.arufaresearch.com',
+  url: 'https://wasmkit.kubiklabs.xyz',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -16,7 +16,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'arufa-research', // Usually your GitHub org/user name.
+  organizationName: 'kubiklabs', // Usually your GitHub org/user name.
   projectName: 'wasmkit', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -37,14 +37,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/arufa-research/wasmkit-user-docs/',
+            'https://github.com/kubiklabs/wasmkit-user-docs/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/arufa-research/wasmkit-user-docs/',
+            'https://github.com/kubiklabs/wasmkit-user-docs/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -60,7 +60,8 @@ const config = {
         title: 'WasmKit',
         logo: {
           alt: 'WasmKit',
-          src: 'img/wasm_kit_logo_light.png',
+          src: 'img/wasm_kit_logo_dark.png',
+          srcDark: 'img/wasm_kit_logo_light.png',
         },
         items: [
           {
@@ -70,7 +71,7 @@ const config = {
             label: 'Docs',
           },
           {
-            href: 'https://github.com/arufa-research/wasmkit',
+            href: 'https://github.com/kubiklabs/wasmkit',
             label: 'GitHub',
             position: 'right',
           },
@@ -101,7 +102,7 @@ const config = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/arufaresearch',
+                href: 'https://twitter.com/kubiklabsxyz',
               },
             ],
           },
@@ -110,16 +111,16 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                href: 'https://arufaresearch.medium.com',
+                href: 'https://kubiklabs.medium.com',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/arufa-research/wasmkit',
+                href: 'https://github.com/kubiklabs/wasmkit',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Arufa Research,  Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} KubikLabs.xyz,  Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
