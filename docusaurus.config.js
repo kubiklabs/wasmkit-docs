@@ -91,6 +91,12 @@ const config = {
           },
           // right
           {
+            href: 'https://discord.gg/vhYgNxy47y',
+            position: 'right',
+            className: 'header-discord-link',
+            'aria-label': 'Discord server',
+          },
+          {
             href: 'https://github.com/kubiklabs/wasmkit',
             position: 'right',
             className: 'header-github-link',
