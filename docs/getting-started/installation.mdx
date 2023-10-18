@@ -39,8 +39,9 @@ Alternatively, you can install rust by following their [documentation](https://w
 ## Installation from source
 
 ```bash
-git clone https://github.com/akubiklabs/wasmkit.git
+git clone https://github.com/kubiklabs/wasmkit.git
 cd wasmkit && yarn install && yarn build
 cd packages/wasmkit && yarn link
 chmod +x $HOME/.yarn/bin/wasmkit
+export PATH=$PATH:$HOME/.yarn/bin
 ```
