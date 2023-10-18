@@ -18,21 +18,34 @@ const sidebars = {
     {
       label: 'Getting started',
       type: 'category',
+      collapsed: false,
       items: [
         'getting-started/installation',
-        'getting-started/overview',
         'getting-started/quickstart',
+        'getting-started/configuration',
+        'getting-started/faq',
       ],
     },
     {
       label: 'Guides',
       type: 'category',
+      collapsed: false,
       items: [
         'guides/compiling-contracts',
         'guides/project',
         'guides/writing-scripts',
         'guides/testing',
         'guides/using-localnet',
+      ],
+    },
+    {
+      label: 'Use cases',
+      type: 'category',
+      collapsed: false,
+      items: [
+        'use-cases/cw-plus',
+        'use-cases/astroport',
+        'use-cases/polytone',
       ],
     },
   ],

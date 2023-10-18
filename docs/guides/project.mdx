@@ -9,7 +9,7 @@ Project setup can be broken down to 3 steps broadly, which are boiler plate gene
 Use command `wasmkit init <project-name>` to generate boilerplate code. Use command `wasmkit init <project-name> <template-name>` to generate boilerplate code using a particular template (template names can be found from repository `https://github.com/kubiklabs/wasmkit-templates`).
 
 ```bash
-$ wasmkit init yellow
+wasmkit init yellow
 ★ Welcome to wasmkit v0.1.1
 Initializing new project in /home/adarsh/Desktop/yellow.
 
@@ -60,7 +60,7 @@ The `contracts/` directory has all the rust files for the contract logic. `scrip
 Replace appearances of `sample-project` and `sample_project` from following files to your project name.
 
 ```bash
-$ grep -r "sample-project"
+grep -r "sample-project"
 package.json:  "name": "sample-project",
 contracts/Cargo.lock:name = "sample-project"
 contracts/Cargo.toml:name = "sample-project"
@@ -68,7 +68,7 @@ scripts/sample-script.ts:  const contract = new Contract('sample-project');
 ```
 
 ```bash
-$ grep -r "sample_project"
+grep -r "sample_project"
 contracts/examples/schema.rs:use sample_project::msg::{ExecuteMsg, InstantiateMsg, QueryMsg, BalanceResponse, AllowanceResponse};
 contracts/examples/schema.rs:use sample_project::state::Constants;
 ```
@@ -76,7 +76,7 @@ contracts/examples/schema.rs:use sample_project::state::Constants;
 Replacing them with a project name suppose `yellow` should look like following:
 
 ```bash
-$ grep -r "yellow"
+grep -r "yellow"
 package.json:  "name": "yellow",
 contracts/Cargo.lock:name = "yellow"
 contracts/Cargo.toml:name = "yellow"
@@ -115,8 +115,9 @@ wasmkit uses config file `wasmkit.config.js` to execute tasks for the given proj
 + trustNode: Should be set to `true`.
 + keyringBackend: Alias of keyring backend to be used.
 + accounts: Array of accounts.
-+ fess: custom fees limits for each type of txns from upload, init, execute and send.
++ fees: custom fees limits for each type of txns from upload, init, execute and send.
 
+<CH.Code lineNumbers={true}>
 ```js
 networks: {
   // uni-2
@@ -140,6 +141,7 @@ networks: {
   }
 }
 ```
+</CH.Code>
 
 **Accounts config**. It is an array of account objects. Each account object has following parameters:
 
@@ -147,6 +149,7 @@ networks: {
 + address: Account address.
 + mnemonic: Mnemonic for the account. Do not push this value to a public repository.
 
+<CH.Code lineNumbers={true}>
 ```js
 const testnet_accounts = [
   {
@@ -161,11 +164,14 @@ const testnet_accounts = [
   }
 ];
 ```
+</CH.Code>
 
 **Mocha test config**. Increase/decrease the `timeout` value to tweak test framework timeout.
 
+<CH.Code lineNumbers={true}>
 ```js
 mocha: {
   timeout: 60000
 }
 ```
+</CH.Code>

@@ -2,8 +2,9 @@
 
 ## Sample script walkthrough
 
-Junokit boilerplate code has sample script `scripts/sample-script.ts` with following content: 
+Wasmkit boilerplate code has sample script `scripts/sample-script.ts` with following content: 
 
+<CH.Code lineNumbers={true}>
 ```js
 import { getAccountByName } from "wasmkit";
 
@@ -41,42 +42,55 @@ async function run() {
 
 module.exports = { default: run };
 ```
+</CH.Code>
 
 Following is a line-by-line breakdown of the above script:
 
 + Import `getAccountByName` method from `wasmkit` library.
 + Import `Counter` clas from `../artifacts/typescript_schema/Counter.ts` file.
 
+<CH.Code lineNumbers={true}>
 ```js
 const { getAccountByName } = require("wasmkit");
 import { CounterContract } from "../artifacts/typescript_schema/Counter";
 ```
+</CH.Code>
 
 + `run` function definition. It should have the same signature as below with no argument. This `run` function is called by wasmkit.
 
+<CH.Code lineNumbers={true}>
 ```js
 async function run () {
 ```
+</CH.Code>
 
 + Fetch details of account `account_0` into `contract_owner` object.
 
+<CH.Code lineNumbers={true}>
 ```js
   const contract_owner = getAccountByName("account_0");
 ```
+</CH.Code>
 
 + Create `CounterContract` object for counter contract.
 
+<CH.Code lineNumbers={true}>
 ```js
   const contract = new CounterContract();
 ```
+</CH.Code>
 
 + Deploy the contract. Network is specified in the `wasmkit run scripts/<script-name> --network <network-name>` command.
 
+<CH.Code lineNumbers={true}>
 ```js
   const deploy_response = await contract.deploy(contract_owner);
-``` 
+```
+</CH.Code>
 
 + Instantiate contract instance with name `{"name": "ERC20"}`, symbol `{"symbol": "ERC"}`, decimals `{"decimals": 10}` and initial_balances `{"initial_balances": [{"address": contract_owner.account.address, "amount": "100000000"}]}` .
+
+<CH.Code lineNumbers={true}>
 ```js
   const contract_info = await contract.instantiate(
     {
@@ -87,9 +101,11 @@ async function run () {
       }]
     }, "deploy test", contract_owner);
 ```
+</CH.Code>
 
 + Execute `transfer()` transaction using account `contract_owner`. For each contract execute method, calling signature is `contract.<method_name>({account: <signing_account>, transferAmount: <tokens_to_send_with_txn>, customFees: <custom_fees_struct>}, ...<method_args>);`.
 
+<CH.Code lineNumbers={true}>
 ```js
   let transfer_response = await contract.transfer(
     { account: contract_owner },
@@ -99,18 +115,23 @@ async function run () {
     }
   );
 ```
+</CH.Code>
 
 + Fetch count value using query `balance`.
 
+<CH.Code lineNumbers={true}>
 ```js
   let balance = await contract.balance({ "address": contract_owner.account.address });
 ```
+</CH.Code>
 
 + Export `run` function as default for the script. Default function is called by wasmkit runner.
 
+<CH.Code lineNumbers={true}>
 ```js
 module.exports = { default: run };
 ```
+</CH.Code>
 
 ## wasmkit Runtime Environment
 
@@ -132,20 +153,25 @@ Contract class is used to create an object which does operations related to a co
 
 Contract constructor requires 1 argument, contract name. If contract `.wasm` file is not present in artifacts then this constructor will throw an error.
 
+<CH.Code lineNumbers={true}>
 ```js
 const contract = new CounterContract();
 ```
+</CH.Code>
 
 **deploy()**
 
 Deploys the contract.
 
+<CH.Code lineNumbers={true}>
 ```js
 const deploy_response = await contract.deploy(contract_owner);
 ```
+</CH.Code>
 
 Gives following response:
 
+<CH.Code lineNumbers={true}>
 ```js
 {
   codeId: <code-id-val>,
@@ -153,11 +179,13 @@ Gives following response:
   deployTimestamp: <timestamp>
 }
 ```
+</CH.Code>
 
 **instantiate()**
 
 Instantiate the contract.
 
+<CH.Code lineNumbers={true}>
 ```js
 const contract_info = await contract.instantiate(
   {
@@ -168,38 +196,44 @@ const contract_info = await contract.instantiate(
     }]
   }, "deploy test", contract_owner);
 ```
+</CH.Code>
 
 Gives following response:
 
+<CH.Code lineNumbers={true}>
 ```js
 {
   contractAddress: <contract-address>,
   instantiateTimestamp: <timestamp>
 }
 ```
-
-<!-- **tx methods**
+</CH.Code>
 
 To list contract's execute methods, print `contract.tx`.
 
+<CH.Code lineNumbers={true}>
 ```js
 wasmkit> contract.tx
 { Approve: [Function (anonymous)], Transfer: [Function (anonymous), TransferFrom: [Function (anonymous), Burn: [Function (anonymous)] }
 ```
+</CH.Code>
 
 **query methods**
 
 To list contract's query methods, print `contract.query`.
 
+<CH.Code lineNumbers={true}>
 ```js
 wasmkit> contract.query
 { Balance: [Function (anonymous), Allowance: [Function (anonymous)] }
-``` -->
+```
+</CH.Code>
 
 ## getAccountByName
 
 In the sample `wasmkit.config.js` file, the accounts are defined as below:
 
+<CH.Code lineNumbers={true}>
 ```js
 const testnet_accounts = [
   {
@@ -214,9 +248,11 @@ const testnet_accounts = [
   }
 ];
 ```
+</CH.Code>
 
 These accounts can be easily accessed inside the scripts or in repl using the method, `getAccountByName(<account_name>)`, for example:
 
+<CH.Code lineNumbers={true}>
 ```js
 const { getAccountByName } = require("wasmkit");
 
@@ -227,17 +263,20 @@ console.log(account_0.name);  // account_0
 console.log(account_0.address); // juno1evpfprq0mre5n0zysj6cf74xl6psk96gus7dp5
 console.log(account_0.mnemonic); // omit sphere nurse rib tribe suffer web account catch brain hybrid zero act gold coral shell voyage matter nose stick crucial fog judge text
 ```
+</CH.Code>
 
 ## createAccounts
 
 This method is used to generate new accounts and then can be filled with some balance using a testnet faucet `https://stakely.io/en/faucet/juno` (faucet are only for testnets). 
 
+<CH.Code lineNumbers={true}>
 ```js
 const { createAccounts } = require("wasmkit");
 
 const res = await createAccounts(1); // array of one account object
 const res = await createAccounts(3);  // array of three account objects
 ```
+</CH.Code>
 
 ## Checkpoints
 

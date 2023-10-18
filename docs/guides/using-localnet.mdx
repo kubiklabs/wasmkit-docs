@@ -8,6 +8,7 @@ In this document you'll find information on setting up a local Juno Network.
 
 The developer blockchain is configured to run inside a docker container. Install Docker for your environment .
 Open a terminal window and change to your project directory. Then start JunoNetwork from here on(Keep juno version updated wth juno repo. It is currently 5.0.0):
+
 ```bash
 docker run -it \
   --name juno_node_1 \
@@ -34,7 +35,7 @@ The docker container can be stopped by CTRL+C. At this point you're running a lo
 We can then check the node info of the node. Open a new terminal :
 
 ```bash
-$ wasmkit node-info
+wasmkit node-info
 Network: default
 ChainId: uni-3
 Block height: 1358994
@@ -45,7 +46,7 @@ Block height: 1358994
 Then we need to compile the contract. This can be done by the following command:
 
 ```bash
-$ wasmkit compile
+wasmkit compile
 ```
 
 ## Running scripts on Localnet
@@ -53,5 +54,5 @@ $ wasmkit compile
 To run any script on localnet open a new terminal and execute:
 
 ```bash
-$ wasmkit run scripts/sample-script.ts
+wasmkit run scripts/sample-script.ts
 ```

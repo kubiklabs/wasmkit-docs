@@ -8,7 +8,7 @@ WasmKit allows you to compile your Rust code, generate schema for it, run your s
 To create your WasmKit project, run `wasmkit init <project-name>`:
 
 ```bash
-$ wasmkit init yellow
+wasmkit init yellow
 ★ Welcome to wasmkit v0.1.1
 Initializing new project in /home/adarsh/Desktop/yellow.
 
@@ -59,7 +59,7 @@ The `contracts/` directory has all the rust files for the contract logic. `scrip
 To see the possible tasks (commands) that are available, run `wasmkit` in your project's folder:
 
 ```bash
-$ wasmkit
+wasmkit
 wasmkit version 0.1.1
 
 Usage: wasmkit [GLOBAL OPTIONS] <TASK> [TASK OPTIONS]
@@ -96,6 +96,7 @@ This is the list of built-in tasks. This is your starting point to find out what
 
 If you take a look at the `wasmkit.config.js` file, you will find :
 
+<CH.Code lineNumbers={true}>
 ```js
 const testnet_accounts = [
   {
@@ -146,6 +147,7 @@ module.exports = {
   }
 };
 ```
+</CH.Code>
 
 **Note** that the accounts mentioned above are just a sample, don't use them in mainnet as it can lead to capital loss.
 
@@ -154,7 +156,7 @@ module.exports = {
 To compile the contracts, use command `wasmkit compile`. This will compile all the contracts in the project. To compile only one contracts or a subset of all contracts in the project, use command `wasmkit compile <contract-source-dir>`. To skip schema generation while compiling use `wasmkit compile --skip-schema`.
 
 ```bash
-$ wasmkit compile
+wasmkit compile
 🛠 Compiling your contract in directory: contracts
 ===========================================
 warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
@@ -337,6 +339,7 @@ User scripts are a way to define the flow of interacting with contracts on some 
 
 A sample script `scripts/sample-script.ts` is available in the boilerplate. Contents of the script is as follows:
 
+<CH.Code lineNumbers={true}>
 ```js
 import { getAccountByName } from "wasmkit";
 
@@ -374,6 +377,7 @@ async function run() {
 
 module.exports = { default: run };
 ```
+</CH.Code>
 
 The script above deploys, inits contract `sample-project` using account `account_0` and add `100000000` amount `ERC` token to the contract_owner address. It then query balance of contract_owner account using `query.balance`. After that it transfers `50000000` token from contract_owner account to the other account address using `tx.transfer`. ANd again query the contract_owner address.
 
@@ -385,6 +389,7 @@ Test scripts are used to test the contract after deploying it to the network and
 
 A sample test script `test/sample-test.ts` is available in the boilerplate. Contents of the script is as follows:
 
+<CH.Code lineNumbers={true}>
 ```js
 import { use } from "chai";
 import { getAccountByName, wasmkitChai } from "wasmkit";
@@ -422,13 +427,14 @@ describe("counter", () => {
   });
 });
 ```
+</CH.Code>
 
 Detailed overview of testing is given the Guides section.
 
 REPL (read–eval–print loop) gives the a console to do real time interactions with the network. Open the REPL using `wasmkit repl --network <network-name>`. Sample REPL interaction shown below as follows:
 
 ```bash
-$ wasmkit repl --network testnet
+wasmkit repl --network testnet
 ★★★  Welcome to wasmkit REPL ★★★
 Try typing: config
 
@@ -452,7 +458,7 @@ When REPL is opened, `wasmkit` library is already imported, use `wasmkit.` to ac
 Node information can be fetched using `wasmkit node-info --network <network-name>` as follows:
 
 ```bash
-$ wasmkit node-info --network testnet
+wasmkit node-info --network testnet
 Network: testnet
 ChainId: uni-3
 Block height: 1358994

@@ -1,6 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
+const {
+  remarkCodeHike,
+} = require("@code-hike/mdx");
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -33,7 +35,19 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          beforeDefaultRemarkPlugins: [
+            [
+              remarkCodeHike, 
+              { 
+                theme: "dracula",
+                autoLink: true,
+                // lineNumbers: true,
+                showCopyButton: true,
+              }
+            ],
+          ],
           sidebarPath: require.resolve('./sidebars.js'),
+          // sidebarCollapsible: false,
           routeBasePath: '/', // Serve the docs at the site's root
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -47,12 +61,15 @@ const config = {
         // },
         theme: {
           customCss: [
+            require.resolve("@code-hike/mdx/styles.css"),
             require.resolve('./src/css/custom.css'),
           ],
         },
       }),
     ],
   ],
+
+  themes: ['mdx-v2'],
 
   plugins: [
     [
