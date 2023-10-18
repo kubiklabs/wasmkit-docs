@@ -1,15 +1,46 @@
 # Installation
 
-## Setup dependencies
+## Prerequisites
+
+The minimum packages/requirements are as follows:
+- Node `v16+`
+- Yarn `v1.22+` or Npm `v6.0+`
+
+### Setup rust environment
+
+WasmKit requires a Rust environment installed on local machine to work properly. A working instance of `rustup` and `rustc` should be enough to get started.
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup --version
+rustc --version
+```
 
 ## Installation
 
+```bash
+yarn global add @kubiklabs/wasmkit
+```
 
-:::info
+or
+
+```bash
+npm install -g @kubiklabs/wasmkit
+```
+
+{/* :::info
+
+TODO: fix this info block issue with mdx v2 adn uncomment here
 
 Alternatively, you can install rust by following their [documentation](https://www.rust-lang.org/tools/install).
 
-:::
+::: */}
 
 ## Installation from source
 
+```bash
+git clone https://github.com/akubiklabs/wasmkit.git
+cd wasmkit && yarn install && yarn build
+cd packages/wasmkit && yarn link
+chmod +x $HOME/.yarn/bin/wasmkit
+```
