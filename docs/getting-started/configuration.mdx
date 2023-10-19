@@ -2,11 +2,23 @@
 
 ## wasmkit.config.js
 
-If you take a look at the `wasmkit.config.js` file, you will find :
+If you take a look at the `wasmkit.config.js` file, you will find:
 
-<CH.Code lineNumbers={true}>
-```js
+<CH.Scrollycoding showCopyButton={true} showExpandButton={true} style={{width: "100%"}}>
 
+## Accounts
+
+Here the account details are stored, where each array corresponds to list of accounts associated with a network.
+
+Each account has 3 values:
+1. `name`: To be referenced in the scripts and tests
+2. `address`: Public address of the account
+3. `mnemonic`: Signing part of the account
+
+**Note:** Never push mainnet mnemonic to a repository
+
+<CH.Code lineNumbers={true} style={{width: "100%"}}>
+```js focus=1:23
 const neutron_testnet_accounts = [
   {
     name: 'account_0',
@@ -25,11 +37,6 @@ const neutron_localnet_accounts = [
     name: 'account_1',
     address: 'neutron10h9stc5v6ntgeygf5xf945njqq5h32r54rf7kf',
     mnemonic: 'veteran ... only'
-  },
-  {
-    name: 'account_2',
-    address: 'neutron14xcrdjwwxtf9zr7dvaa97wy056se6r5erln9pf',
-    mnemonic: 'obscure ... shine'
   }
 ];
 
@@ -41,20 +48,6 @@ const networks = {
     endpoint: 'http://localhost:26657/',
     chainId: 'testing-1',
     accounts: neutron_localnet_accounts,
-    fees: {
-      upload: {
-        amount: [{ amount: "750000", denom: "untrn" }],
-        gas: "3000000",
-      },
-      init: {
-        amount: [{ amount: "250000", denom: "untrn" }],
-        gas: "1000000",
-      },
-      exec: {
-        amount: [{ amount: "250000", denom: "untrn" }],
-        gas: "1000000",
-      }
-    },
   },
   neutron_testnet: {
     endpoint: 'https://rpc-palvus.pion-1.ntrn.tech/',
@@ -79,20 +72,6 @@ const networks = {
     endpoint: 'https://rpc-kralum.neutron-1.neutron.org',
     chainId: 'neutron-1',
     accounts: neutron_mainnet_accounts,
-    fees: {
-      upload: {
-        amount: [{ amount: "750000", denom: "untrn" }],
-        gas: "3000000",
-      },
-      init: {
-        amount: [{ amount: "250000", denom: "untrn" }],
-        gas: "1000000",
-      },
-      exec: {
-        amount: [{ amount: "250000", denom: "untrn" }],
-        gas: "1000000",
-      }
-    },
   },
 };
 
@@ -103,27 +82,12 @@ module.exports = {
     localnet: networks.neutron_localnet,
     mainnet: networks.neutron_mainnet,
   },
-
   localnetworks: {
-    juno: {
-      docker_image: "uditgulati0/juno-node",
-      rpc_port: 26657,
-      rest_port: 1317,
-      flags: ["GAS_LIMIT=10000000", "STAKE_TOKEN=ujunox", "TIMEOUT_COMMIT=5s"],
-      docker_command: "./setup_and_run.sh juno16g2rahf5846rxzp3fwlswy08fz8ccuwk03k57y",
-    },
     neutron: {
       docker_image: "uditgulati0/neutron-node",
       rpc_port: 26657,
       rest_port: 1317,
       flags: ["RUN_BACKGROUND=0"],
-    },
-    osmosis: {
-      docker_image: "uditgulati0/osmosis-node",
-      rpc_port: 26657,
-      rest_port: 1317,
-      flags: [],
-      docker_command: "/osmosis/setup.sh",
     },
   },
   mocha: {
@@ -140,12 +104,68 @@ module.exports = {
 ```
 </CH.Code>
 
-**Note** that the accounts mentioned above are just a sample, don't use them in mainnet as it can lead to capital loss.
+---
 
 ## Networks
 
-## Accounts
+Here the network details are stored, specifying how to interact with a network.
 
-## Denoms
+Each network has 4 values:
+1. `endpoint`: The RPC endpoint to connect to
+2. `chainId`: Network's unique chain ID
+3. `accounts`: List of accounts associated with the network
+4. `fees`(Optional): Custom fees per action [Deploy, Init, Execute]
 
-## wasmkit.chains.js
+<CH.Code lineNumbers={true}>
+```js focus=25:55
+```
+</CH.Code>
+
+---
+
+## Stitching networks, accounts
+
+Here we tell WasmKit the unique name to assign to each network while doing any action such as running a script, a test or simply just doing a `node-info` query.
+
+The `default` network will be used whenever a network name is not passed in wasmkit command. To use any other network, `--network` flag followed by `<network-name>` can be used.
+
+<CH.Code lineNumbers={true}>
+```js focus=58:63
+```
+</CH.Code>
+
+---
+
+## Adding a localnetwork
+
+This part of the config specifies how to run a docker container of network locally. Please refer to the [WasmKit repository](https://github.com/kubiklabs/wasmkit) for config for other kinds of local networks.
+
+In this example, we've configured a neutron node with RPC endpoint on `localhost:26657` and REST endpoint on `localhost:1317`.
+
+<CH.Code lineNumbers={true}>
+```js focus=64:71
+```
+</CH.Code>
+
+---
+
+## Miscellaneous
+
+Here we specify the following:
+
+1. **Mocha**: Configuration related to tests
+- `timeout`: Timout for each test file
+
+2. **Rust**: Rust compiler values
+- `version`: Compiler version to use
+
+3. **Commands**: To overwrite contract compilation steps
+- `compile`: Command to use to generate `.wasm` binary files
+- `schema`: Command to use to generate `.json` schema files
+
+<CH.Code lineNumbers={true}>
+```js focus=72:82
+```
+</CH.Code>
+
+</CH.Scrollycoding>

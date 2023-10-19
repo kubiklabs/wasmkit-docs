@@ -1212,17 +1212,19 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@code-hike/lighter@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@code-hike/lighter/-/lighter-0.7.0.tgz#7bb7d59631237d7d2e82434c3ea6fe1875813cb0"
-  integrity sha512-64O07rIORKQLB+5T/GKAmKcD9sC0N9yHFJXa0Hs+0Aee1G+I4bSXxTccuDFP6c/G/3h5Pk7yv7PoX9/SpzaeiQ==
-
-"@code-hike/mdx@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@code-hike/mdx/-/mdx-0.9.0.tgz#fe592887dc91b46374d9f7c176eb07e65fd9e2e3"
-  integrity sha512-0wg68ZCjVWAkWT4gBUZJ8Mwktjen/XeWyqBQCrhA2IZSbZZnMYsEI6JJEFb/nZoNI3comB3JdxPLykZRq3qT2A==
+"@code-hike/lighter@0.8.2":
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@code-hike/lighter/-/lighter-0.8.2.tgz#21fe70c339b645718606a8aa301f15524e5f829f"
+  integrity sha512-h7PA2+90rIRQWamxeHSpcgVLs9hwhz8UW8+RG+vYIYh2Y4F2GTa4c+7S5HQH/BKTyMPv5yrSCEwhCB605gO5og==
   dependencies:
-    "@code-hike/lighter" "0.7.0"
+    ansi-sequence-parser "^1.1.0"
+
+"@code-hike/mdx@0.10.0-next.1":
+  version "0.10.0-next.1"
+  resolved "https://registry.yarnpkg.com/@code-hike/mdx/-/mdx-0.10.0-next.1.tgz#164984a4fd7e5166d58f84b9d051180e9890b449"
+  integrity sha512-HhLiYkXI61gpYXA5ZKZ6V6kCStGa3in7HRbvlQY6vBO1dbvlm3tEvbg6+0qjWRYIsUzEZO6GHVC3hwSVwXqIFg==
+  dependencies:
+    "@code-hike/lighter" "0.8.2"
     node-fetch "^2.0.0"
 
 "@colors/colors@1.5.0":
@@ -3036,6 +3038,11 @@ ansi-regex@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.0.1.tgz#3183e38fae9a65d7cb5e53945cd5897d0260a06a"
   integrity sha512-n5M855fKb2SsfMIiFFoVrABHJC8QtHwVx+mHWP3QcEqBHYienj5dHSgjbxtC0WEZXYt4wcD6zrQElDPhFuZgfA==
+
+ansi-sequence-parser@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/ansi-sequence-parser/-/ansi-sequence-parser-1.1.1.tgz#e0aa1cdcbc8f8bb0b5bca625aac41f5f056973cf"
+  integrity sha512-vJXt3yiaUL4UU546s3rPXlsry/RnM730G1+HkpKE012AN0sx1eOrxSu95oKDIonskeLTijMgqWZ3uDEe3NFvyg==
 
 ansi-styles@^3.2.1:
   version "3.2.1"
