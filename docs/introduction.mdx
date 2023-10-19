@@ -9,9 +9,9 @@ This section gives overview of the most comman use cases. Read [Getting Started]
 
 ## Overview
 
-WasmKit is a development framework for building CosmWasm contracts. The aim of the project is to make contracts development process simple, efficient and scalable. User can focus on logic of contract and not much about further steps in development.
+WasmKit is a development framework for building CosmWasm contracts. The aim of the project is to make contracts development process simple, efficient and scalable. User can focus on logic of contract and not much on further steps in the development.
 
-It facilitates features such as initiating project repo from contract templates, easy compilation of contracts, deployment, interacting with contracts using schema and contract testing framework.
+It facilitates features such as initiating project repository from contract templates, easy compilation of contracts, deployment, interacting with contracts using schema and a contract testing framework.
 
 ## Initialize a project
 
@@ -56,9 +56,36 @@ wasmkit clean <contract-name>
 ``` 
 This will remove specific files related to that contract.
 
-
 ## Running user scripts
 
-User scripts are a way to define the flow of interacting with contracts on some network in form of a script. These scripts can be used to deploy a contract, query/transact with the contract.A sample script `scripts/sample-script.ts` is available in the boilerplate.
+User scripts are a way to define the flow of interacting with contracts on some network in form of a script. These scripts can be used to deploy a contract, query/transact with the contract. A sample script `scripts/sample-script.ts` is available in the boilerplate. To run a script:
 
-Run `yarn build` before running scripts, this will generate a `build/` directory in the project's directory with compiled `.js` files to be used by wasmkit.
+```bash
+wasmkit run scripts/<script-name>
+```
+
+Run the sample script:
+
+```bash
+wasmkit run scripts/sample-script.ts # runs the sample script
+```
+
+## Testing contracts
+
+Tests for the contract logic can be written in Typescript and are placed in `test/` directory. These tests deploy the contracts to a network and tests against the deployed contract. To run the tests:
+
+```bash
+wasmkit test # runs all tests in test/ directory
+```
+
+Run a single test:
+
+```bash
+wasmkit test test/<test-name>
+```
+
+Run the sample test:
+
+```bash
+wasmkit test test/sample-test.ts # runs the sample test
+```

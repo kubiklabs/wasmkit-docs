@@ -1,5 +1,5 @@
 
-# Quick Start
+# Quickstart
 
 This guide will explore the basics of creating a simple WasmKit project.
 
@@ -12,38 +12,43 @@ wasmkit init <project-name>
 
 # or
 
-wasmkit init yellow # example
+wasmkit init yellow #example
 ```
 
 The generated directory will have the following initial structure:
 
 ```bash
 .
-├── contracts
-│   ├── Cargo.lock
-│   ├── Cargo.toml
-│   ├── examples
-│   │   └── schema.rs
-│   └── src
-│       ├── contract.rs
-│       ├── error.rs
-│       ├── lib.rs
-│       ├── msg.rs
-│       └── state.rs
-├── package.json
-├── Cargo.toml
 ├── Cargo.lock
-├── wasmkit.config.js
+├── Cargo.toml
 ├── README.md
+├── contracts
+│   └── counter
+│       ├── Cargo.lock
+│       ├── Cargo.toml
+│       ├── LICENSE
+│       ├── README.md
+│       ├── examples
+│       │   └── schema.rs
+│       └── src
+│           ├── contract.rs
+│           ├── error.rs
+│           ├── lib.rs
+│           ├── msg.rs
+│           └── state.rs
+├── package.json
 ├── scripts
 │   └── sample-script.ts
-└── test
-    └── sample-test.ts
+├── test
+│   ├── sample-test.ts
+│   └── tsconfig.json
+├── tsconfig.json
+└── wasmkit.config.js
 
-5 directories, 15 files
+7 directories, 19 files
 ```
 
-The `contracts/` directory has all the rust files for the contract logic. `scripts/` directory can contain `.ts` scripts that user can write according to the use case, a sample script has been added to give some understanding of how a user script should look like. `test/` directory can contain `.ts` scripts to run tests for the deployed contracts.
+The `contracts/` directory has all the rust files for the contract logic. `scripts/` directory can contain `.ts` scripts that user can write according to the use case, a sample script has been added to give some understanding of how a user script should look like. `test/` directory contains `.ts` scripts to run tests for the deployed contracts.
 
 ## Listing tasks
 
@@ -55,72 +60,13 @@ wasmkit help
 
 This is the list of built-in tasks. This is your starting point to find out what tasks are available to run.
 
-If you take a look at the `wasmkit.config.js` file, you will find :
-
-<CH.Code lineNumbers={true}>
-```js
-const testnet_accounts = [
-  {
-    name: 'account_0',
-    address: 'juno1evpfprq0mre5n0zysj6cf74xl6psk96gus7dp5',
-    mnemonic: 'omit sphere nurse rib tribe suffer web account catch brain hybrid zero act gold coral shell voyage matter nose stick crucial fog judge text'
-  },
-  {
-    name: 'account_1',
-    address: 'juno1njamu5g4n0vahggrxn4ma2s4vws5x4w3u64z8h',
-    mnemonic: 'student prison fresh dwarf ecology birth govern river tissue wreck hope autumn basic trust divert dismiss buzz play pistol focus long armed flag bicycle'
-  }
-];
-
-const localnet_accounts = [
-  {
-    name: 'account_0',
-    address: 'juno16g2rahf5846rxzp3fwlswy08fz8ccuwk03k57y',
-    mnemonic: 'clip hire initial neck maid actor venue client foam budget lock catalog sweet steak waste crater broccoli pipe steak sister coyote moment obvious choose'
-  }
-];
-
-const networks = {
-  localnet: {
-    endpoint: 'http://localhost:26657/',
-    accounts: localnet_accounts,
-  },
-  // uni-2
-  testnet: {
-    endpoint: 'https://rpc.uni.juno.deuslabs.fi/',
-    chainId: 'uni-3',
-    trustNode: true,
-    keyringBackend: 'test',
-    accounts: testnet_accounts,
-  },
-};
-
-module.exports = {
-  networks: {
-    default: networks.testnet,
-    localnet: networks.localnet,
-  },
-  mocha: {
-    timeout: 60000
-  },
-  rust: {
-    version: "1.59.0",
-  }
-};
-```
-</CH.Code>
-
-**Note** that the accounts mentioned above are just a sample, don't use them in mainnet as it can lead to capital loss.
-
 ## Compiling contracts
 
-To compile the contracts, use:
+To compile all the contracts in the project, use:
 
 ```bash
 wasmkit compile
 ```
-
-This will compile all the contracts in the project.
 
 To compile only one contracts or a subset of all contracts in the project, use: 
 
@@ -137,8 +83,22 @@ wasmkit compile --skip-schema
 This command will generate following:
 
 1. Contract binary files --> `artifacts/contracts/*.wasm`
-2. Schema files --> `artifacts/schema/*.json`
-3. Typescript schema files --> `artifacts/typescript_schema/*.ts`
+2. Schema files --> `artifacts/schema/<contract-name>/*.json`
+3. Typescript contract client files --> `artifacts/typescript_schema/*.ts`
+
+## Get network information
+
+Getting network information can be useful to verify if the `wasmkit.config.js` file has the right network configutaion or to check if the network is currently operational. Node information (chainId, blockHeight) can be fetched as follows:
+
+```bash
+wasmkit node-info
+```
+
+To get info of a non-default network:
+
+```bash
+wasmkit node-info --network testnet # if testnet config present in wasmkit.config.js
+```
 
 ## Running user scripts
 
@@ -148,30 +108,30 @@ A sample script `scripts/sample-script.ts` is available in the boilerplate. Cont
 
 <CH.Code lineNumbers={true}>
 ```js
-import { getAccountByName } from "wasmkit";
+import { getAccountByName } from "@kubiklabs/wasmkit";
 
-import { CounterContract } from "../artifacts/typescript_schema/Counter";
+import { CounterContract } from "../artifacts/typescript_schema/CounterContract";
 
-async function run() {
+export default async function run () {
   const runTs = String(new Date());
-  const contract_owner = getAccountByName("account_0");
+  const contract_owner = await getAccountByName("account_0");
   const counter_contract = new CounterContract();
-  await counter_contract.setUpclient();
-
-  console.log("Client setup done!! ");
+  await counter_contract.setupClient();
 
   const deploy_response = await counter_contract.deploy(
     contract_owner,
-    { // custom fees
-      amount: [{ amount: "900000", denom: "ujunox" }],
-      gas: "35000000",
-    }
   );
   console.log(deploy_response);
+
   const contract_info = await counter_contract.instantiate(
     {
-      "count": 102
-    }, `deploy test ${runTs}`, contract_owner);
+      "count": 102,
+    },
+    `deploy test ${runTs}`,
+    contract_owner,
+    undefined,  // transferAmount
+    // customFees, // custom fees here
+  );
   console.log(contract_info);
 
   const inc_response = await counter_contract.increment({account: contract_owner});
@@ -180,17 +140,21 @@ async function run() {
   const response = await counter_contract.getCount();
   console.log(response);
 
+  const ex_response = await counter_contract.increment(
+    {
+      account: contract_owner,
+    }
+  );
+  console.log(ex_response);
 }
-
-module.exports = { default: run };
 ```
 </CH.Code>
 
-Detailed overview of testing is given in the [Writing scripts](./guides/writing-scripts) section.
+Detailed overview of writing scripts is given in the [Writing scripts](./guides/writing-scripts) section.
 
-The script above deploys, inits contract `sample-project` using account `account_0` and add `100000000` amount `ERC` token to the contract_owner address. It then query balance of contract_owner account using `query.balance`. After that it transfers `50000000` token from contract_owner account to the other account address using `tx.transfer`. ANd again query the contract_owner address.
+The script above deploys, inits contract `counter` using account `account_0` (account details in `wasmkit.config.js` file). It then executes a transaction `increment()` on the contract again using `account_0` as signer account. Afterwards, it queries and logs the `getCount()` query to query the count stored in the contract and finally executes `increment()` one more time.
 
-For the above script to be able to run, an account with name `account_0` must be present in `wasmkit.config.js` and contract artifacts (compiled `.wasm` and schema `.json` files) in `artifacts/` dir must be present for contract `sample-project`.
+For the above script to be able to run, an account with name `account_0` must be present in `wasmkit.config.js` and contract artifacts (compiled `.wasm`, schema `.json` files and typescript client `.ts` files) in `artifacts/` directory must be present for contract `counter`.
 
 ## Running test scripts
 
@@ -201,37 +165,42 @@ A sample test script `test/sample-test.ts` is available in the boilerplate. Cont
 <CH.Code lineNumbers={true}>
 ```js
 import { use } from "chai";
-import { getAccountByName, wasmkitChai } from "wasmkit";
+import { getAccountByName, wasmKitChai } from "@kubiklabs/wasmkit";
 
-import { CounterContract } from "../artifacts/typescript_schema/Counter";
+import { CounterContract } from "../artifacts/typescript_schema/CounterContract";
 
-use(wasmkitChai);
+use(wasmKitChai);
 
 describe("counter", () => {
-
   async function setup() {
-    const contract_owner = getAccountByName("account_0");
-    const counter_contract = new CounterContract();
-    await counter_contract.setUpclient();
+    const contract_owner = await getAccountByName("account_0");
+    const contract = new CounterContract();
+    await contract.setupClient();
 
-    return { contract_owner, counter_contract };
+    return { contract_owner, contract };
   }
 
   it("deploy and init", async () => {
     const runTs = String(new Date());
-    const { contract_owner, counter_contract } = await setup();
-    const deploy_response = await counter_contract.deploy(
+    const { contract_owner, contract } = await setup();
+    const deploy_response = await contract.deploy(
       contract_owner,
       { // custom fees
-        amount: [{ amount: "90000", denom: "ujunox" }],
+        amount: [{ amount: "90000", denom: "untrn" }],
         gas: "35000000",
       }
     );
     console.log(deploy_response);
-    const contract_info = await counter_contract.instantiate(
+
+    const contract_info = await contract.instantiate(
       {
-        "count": 102
-      }, `deploy test ${runTs}`, contract_owner);
+        "count": 102,
+      },
+      `deploy test ${runTs}`,
+      contract_owner,
+      undefined, // tokens to tranfer
+      // customFees, // custom fess here
+    );
     console.log(contract_info);
   });
 });
@@ -240,10 +209,33 @@ describe("counter", () => {
 
 Detailed overview of testing is given in the [Guides](./guides/testing) section.
 
+## WebUI for contracts
+
+Wasmkit can help automatically generate a Web based playground interface which is instrumental when quickly testing certain contract interactions. This is beneficial when doing one-time quick interactions for which writing a script does not make much sense.
+
+This can be leveraged by either QA to do interactions with random values quickly or for the end user to directly communicate with a contract through a web interface without requiring any development environment setup.
+
+Generate plaground interface, once the contracts are deployed:
+
+```bash
+wasmkit playground
+```
+
+Run the playground locally:
+
+```bash
+cd plaground
+yarn start
+```
+
+**Note: ** This playground is minimal React application that can run locally or hosted online with a domain for others to use just like any other React application.
+
+## Interactive scripting with REPL
+
 REPL (read–eval–print loop) gives the a console to do real time interactions with the network. Open the REPL using `wasmkit repl --network <network-name>`. Sample REPL interaction shown below as follows:
 
 ```bash
-wasmkit repl --network testnet
+wasmkit repl
 ★★★  Welcome to wasmkit REPL ★★★
 Try typing: config
 
@@ -251,27 +243,15 @@ wasmkit> config
 {
   name: 'default',
   config: {
-    endpoint: 'https://rpc.uni.juno.deuslabs.fi/',
-    chainId: 'uni-3',
-    trustNode: true,
-    keyringBackend: 'test',
-    accounts: [ [Object], [Object] ]
+    endpoint: 'https://rpc-palvus.pion-1.ntrn.tech/',
+    chainId: 'pion-1',
+    accounts: [ [Object] ],
+    fees: { upload: [Object], init: [Object], exec: [Object] }
   }
 }
 ```
 
 When REPL is opened, `wasmkit` library is already imported, use `wasmkit.` to access classes and functions from the library. wasmkit Runtime Environment can be access using `env` variable and `wasmkit.config.js` data can be accessed using `config` variable.
-
-## Get node information
-
-Node information can be fetched using `wasmkit node-info --network <network-name>` as follows:
-
-```bash
-wasmkit node-info --network testnet
-Network: testnet
-ChainId: uni-3
-Block height: 1358994
-```
 
 ## Cleanup artifacts
 

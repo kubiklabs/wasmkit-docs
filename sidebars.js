@@ -31,8 +31,8 @@ const sidebars = {
       type: 'category',
       collapsed: false,
       items: [
-        'guides/compiling-contracts',
         'guides/project',
+        'guides/compiling-contracts',
         'guides/writing-scripts',
         'guides/testing',
         'guides/using-localnet',
