@@ -6,30 +6,30 @@ Wasmkit boilerplate code has sample script `scripts/sample-script.ts` with follo
 
 <CH.Code lineNumbers={true}>
 ```js
-import { getAccountByName } from "wasmkit";
+import { getAccountByName } from "@kubiklabs/wasmkit";
 
-import { CounterContract } from "../artifacts/typescript_schema/Counter";
+import { CounterContract } from "../artifacts/typescript_schema/CounterContract";
 
-async function run() {
+export default async function run () {
   const runTs = String(new Date());
-  const contract_owner = getAccountByName("account_0");
+  const contract_owner = await getAccountByName("account_0");
   const counter_contract = new CounterContract();
-  await counter_contract.setUpclient();
-
-  console.log("Client setup done!! ");
+  await counter_contract.setupClient();
 
   const deploy_response = await counter_contract.deploy(
     contract_owner,
-    { // custom fees
-      amount: [{ amount: "900000", denom: "ujunox" }],
-      gas: "35000000",
-    }
   );
   console.log(deploy_response);
+
   const contract_info = await counter_contract.instantiate(
     {
-      "count": 102
-    }, `deploy test ${runTs}`, contract_owner);
+      "count": 102,
+    },
+    `deploy test ${runTs}`,
+    contract_owner,
+    undefined,  // transferAmount
+    // customFees, // custom fees here
+  );
   console.log(contract_info);
 
   const inc_response = await counter_contract.increment({account: contract_owner});
@@ -38,250 +38,138 @@ async function run() {
   const response = await counter_contract.getCount();
   console.log(response);
 
-}
-
-module.exports = { default: run };
-```
-</CH.Code>
-
-Following is a line-by-line breakdown of the above script:
-
-+ Import `getAccountByName` method from `wasmkit` library.
-+ Import `Counter` clas from `../artifacts/typescript_schema/Counter.ts` file.
-
-<CH.Code lineNumbers={true}>
-```js
-const { getAccountByName } = require("wasmkit");
-import { CounterContract } from "../artifacts/typescript_schema/Counter";
-```
-</CH.Code>
-
-+ `run` function definition. It should have the same signature as below with no argument. This `run` function is called by wasmkit.
-
-<CH.Code lineNumbers={true}>
-```js
-async function run () {
-```
-</CH.Code>
-
-+ Fetch details of account `account_0` into `contract_owner` object.
-
-<CH.Code lineNumbers={true}>
-```js
-  const contract_owner = getAccountByName("account_0");
-```
-</CH.Code>
-
-+ Create `CounterContract` object for counter contract.
-
-<CH.Code lineNumbers={true}>
-```js
-  const contract = new CounterContract();
-```
-</CH.Code>
-
-+ Deploy the contract. Network is specified in the `wasmkit run scripts/<script-name> --network <network-name>` command.
-
-<CH.Code lineNumbers={true}>
-```js
-  const deploy_response = await contract.deploy(contract_owner);
-```
-</CH.Code>
-
-+ Instantiate contract instance with name `{"name": "ERC20"}`, symbol `{"symbol": "ERC"}`, decimals `{"decimals": 10}` and initial_balances `{"initial_balances": [{"address": contract_owner.account.address, "amount": "100000000"}]}` .
-
-<CH.Code lineNumbers={true}>
-```js
-  const contract_info = await contract.instantiate(
+  const ex_response = await counter_contract.increment(
     {
-      "name": "ERC20", "symbol": "ERC", "decimals": 10,
-      "initial_balances": [{
-        "address": contract_owner.account.address,
-        "amount": "100000000"
-      }]
-    }, "deploy test", contract_owner);
-```
-</CH.Code>
-
-+ Execute `transfer()` transaction using account `contract_owner`. For each contract execute method, calling signature is `contract.<method_name>({account: <signing_account>, transferAmount: <tokens_to_send_with_txn>, customFees: <custom_fees_struct>}, ...<method_args>);`.
-
-<CH.Code lineNumbers={true}>
-```js
-  let transfer_response = await contract.transfer(
-    { account: contract_owner },
-    {
-      recipient: other.account.address,
-      amount: "50000000"
+      account: contract_owner,
     }
   );
-```
-</CH.Code>
-
-+ Fetch count value using query `balance`.
-
-<CH.Code lineNumbers={true}>
-```js
-  let balance = await contract.balance({ "address": contract_owner.account.address });
-```
-</CH.Code>
-
-+ Export `run` function as default for the script. Default function is called by wasmkit runner.
-
-<CH.Code lineNumbers={true}>
-```js
-module.exports = { default: run };
-```
-</CH.Code>
-
-## wasmkit Runtime Environment
-
-wasmkit runtime environment is used internally by wasmkit. It is created when a wasmkit task is executed using bash command `wasmkit ...`. It can be accessed in REPL using variable `env`. It has following parameters:
-
-+ **config**: Has paths of config file, contract sources, artifacts, project root and test path. Other config values such as networks config and mocha timeout.
-
-+ **runtimeArgs**: Runtime metadata such as network to use etc. Network can be specified in a wasmkit command like `wasmkit ... --network <network-name>`.
-
-+ **tasks**: List of available tasks with details.
-
-+ **network**: Details of the network currently being used.
-
-## Contract class
-
-Contract class is used to create an object which does operations related to a contract such as deploying, interacting with network. One can also list query, execute methods available for the contract using this class.
-
-**Constructor**
-
-Contract constructor requires 1 argument, contract name. If contract `.wasm` file is not present in artifacts then this constructor will throw an error.
-
-<CH.Code lineNumbers={true}>
-```js
-const contract = new CounterContract();
-```
-</CH.Code>
-
-**deploy()**
-
-Deploys the contract.
-
-<CH.Code lineNumbers={true}>
-```js
-const deploy_response = await contract.deploy(contract_owner);
-```
-</CH.Code>
-
-Gives following response:
-
-<CH.Code lineNumbers={true}>
-```js
-{
-  codeId: <code-id-val>,
-  contractCodeHash: <code-hash-val>,
-  deployTimestamp: <timestamp>
+  console.log(ex_response);
 }
 ```
 </CH.Code>
 
-**instantiate()**
+A line-by-line breakdown of the above script:
 
-Instantiate the contract.
+<CH.Scrollycoding showCopyButton={true} showExpandButton={true} style={{width: "100%"}}>
 
-<CH.Code lineNumbers={true}>
-```js
-const contract_info = await contract.instantiate(
-  {
-    "name": "ERC20", "symbol": "ERC", "decimals": 10,
-    "initial_balances": [{
-      "address": contract_owner.account.address,
-      "amount": "100000000"
-    }]
-  }, "deploy test", contract_owner);
-```
-</CH.Code>
+## Importing wasmkit and contract clients
 
-Gives following response:
+1. Import `getAccountByName` method from `@kubiklabs/wasmkit` library.
+2. Import `CounterContract` client class from `../artifacts/typescript_schema/CounterContract.ts` file.
 
-<CH.Code lineNumbers={true}>
-```js
-{
-  contractAddress: <contract-address>,
-  instantiateTimestamp: <timestamp>
+<CH.Code lineNumbers={true} style={{width: "100%"}}>
+```js focus=1:3
+import { getAccountByName } from "@kubiklabs/wasmkit";
+
+import { CounterContract } from "../artifacts/typescript_schema/CounterContract";
+
+export default async function run () {
+  const runTs = String(new Date());
+  const contract_owner = await getAccountByName("account_0");
+  const counter_contract = new CounterContract();
+  await counter_contract.setupClient();
+
+  const deploy_response = await counter_contract.deploy(
+    contract_owner,
+  );
+  console.log(deploy_response);
+
+  const contract_info = await counter_contract.instantiate(
+    {
+      "count": 102,
+    },
+    `deploy test ${runTs}`,
+    contract_owner,
+    undefined,  // transferAmount
+    // customFees, // custom fees here
+  );
+  console.log(contract_info);
+
+  const inc_response = await counter_contract.increment({account: contract_owner});
+  console.log(inc_response);
+
+  const response = await counter_contract.getCount();
+  console.log(response);
+
+  const ex_response = await counter_contract.increment(
+    {
+      account: contract_owner,
+    }
+  );
+  console.log(ex_response);
 }
 ```
 </CH.Code>
 
-To list contract's execute methods, print `contract.tx`.
+---
+
+## Load accounts, contracts
+
+1. Fetch details of account `account_0` into `contract_owner` object.
+2. Create contract client instance of `CounterContract`.
+3. Connect contract client with the network.
 
 <CH.Code lineNumbers={true}>
-```js
-wasmkit> contract.tx
-{ Approve: [Function (anonymous)], Transfer: [Function (anonymous), TransferFrom: [Function (anonymous), Burn: [Function (anonymous)] }
+```js focus=7:9
 ```
 </CH.Code>
 
-**query methods**
+---
 
-To list contract's query methods, print `contract.query`.
+## Deploy, init the contract
+
+1. Deploy the contract. Network is specified in the `wasmkit run scripts/<script-name> --network <network-name>` command.
+2. Instantiate contract instance with initMsg, label and signing account. Any funds to send with initMsg and custom gas fees is optional.
 
 <CH.Code lineNumbers={true}>
-```js
-wasmkit> contract.query
-{ Balance: [Function (anonymous), Allowance: [Function (anonymous)] }
+```js focus=11:25
 ```
 </CH.Code>
 
-## getAccountByName
+---
 
-In the sample `wasmkit.config.js` file, the accounts are defined as below:
+## Execute a contract transaction
+
+1. Execute `increment()` transaction using account `contract_owner`. Any funds to send with execMsg and custom gas fees is optional. Refer to WasmKit library API for detailed execute call.
 
 <CH.Code lineNumbers={true}>
-```js
-const testnet_accounts = [
-  {
-    name: 'account_0',
-    address: 'juno1evpfprq0mre5n0zysj6cf74xl6psk96gus7dp5',
-    mnemonic: 'omit sphere nurse rib tribe suffer web account catch brain hybrid zero act gold coral shell voyage matter nose stick crucial fog judge text'
-  },
-  {
-    name: 'account_1',
-    address: 'juno1njamu5g4n0vahggrxn4ma2s4vws5x4w3u64z8h',
-    mnemonic: 'student prison fresh dwarf ecology birth govern river tissue wreck hope autumn basic trust divert dismiss buzz play pistol focus long armed flag bicycle'
-  }
-];
+```js focus=27:28
 ```
 </CH.Code>
 
-These accounts can be easily accessed inside the scripts or in repl using the method, `getAccountByName(<account_name>)`, for example:
+---
+
+## Query the contract
+
+1. Fetch count value using query `getCount()`.  Refer to WasmKit library API for detailed query call.
 
 <CH.Code lineNumbers={true}>
-```js
-const { getAccountByName } = require("wasmkit");
-
-const account_0 = getAccountByName("account_0");
-const account_1 = getAccountByName("account_1");
-
-console.log(account_0.name);  // account_0
-console.log(account_0.address); // juno1evpfprq0mre5n0zysj6cf74xl6psk96gus7dp5
-console.log(account_0.mnemonic); // omit sphere nurse rib tribe suffer web account catch brain hybrid zero act gold coral shell voyage matter nose stick crucial fog judge text
+```js focus=30:31
 ```
 </CH.Code>
 
-## createAccounts
+</CH.Scrollycoding>
 
-This method is used to generate new accounts and then can be filled with some balance using a testnet faucet `https://stakely.io/en/faucet/juno` (faucet are only for testnets). 
+## Wasmkit Runtime Environment
 
-<CH.Code lineNumbers={true}>
-```js
-const { createAccounts } = require("wasmkit");
+Wasmkit runtime environment is used internally by Wasmkit. It is created when a wasmkit task is executed using bash command `wasmkit ...` which can be accessed in REPL using `env` variable and has following parameters:
 
-const res = await createAccounts(1); // array of one account object
-const res = await createAccounts(3);  // array of three account objects
-```
-</CH.Code>
+1. **config**: Has paths of config file, contract sources, artifacts, project root and test path. Other config values such as networks config and mocha timeout.
+
+2. **runtimeArgs**: Runtime metadata such as network to use etc. Network can be specified in a wasmkit command like `wasmkit ... --network <network-name>`.
+
+3. **tasks**: List of available tasks with details.
+
+4. **network**: Details of the network currently being used.
 
 ## Checkpoints
 
-Checkpoints store the metadata of contract instance on the network. It stores the deploy metadata (codeId, contractCodeHash, deployTimestamp) and instantiate metadata (contractAddress, instantiateTimestamp). This comes handy when a script is run which deploys, inits and does some interactions with the contracts. 
+Checkpoints store the metadata of contract instance on the network. It stores the deploy metadata (`codeId`, `contractCodeHash`, `deployTimestamp`) and instantiate metadata (`contractAddress`, `instantiateTimestamp`). This comes handy when a script is run which deploys, inits and does some interactions with the contracts. 
 
 Suppose the script fails after init step and now script is to be rerun after some fixes in the contract, here one does not want for the contract to be deployed and instantiated again, so wasmkit picks up the saved metadata from checkpoints file and directly skips to part after init and uses the previously deployed instance and user does not have to pay the extra gas and wait extra time to deploy, init the contract again. Same happens when there is error before init and rerun skips deploy and directly executes init step.
 
-To skip using checkpoints when running script, use `wasmkit run <script-path> --skip-checkpoints`.
+To skip using checkpoints when running script, use:
+
+```bash
+wasmkit run <script-path> --skip-checkpoints
+```

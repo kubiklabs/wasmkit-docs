@@ -19,12 +19,10 @@ The generated directory will have the following initial structure:
 
 ```bash
 .
-├── Cargo.lock
 ├── Cargo.toml
 ├── README.md
 ├── contracts
 │   └── counter
-│       ├── Cargo.lock
 │       ├── Cargo.toml
 │       ├── LICENSE
 │       ├── README.md
@@ -45,7 +43,7 @@ The generated directory will have the following initial structure:
 ├── tsconfig.json
 └── wasmkit.config.js
 
-7 directories, 19 files
+7 directories, 17 files
 ```
 
 The `contracts/` directory has all the rust files for the contract logic. `scripts/` directory can contain `.ts` scripts that user can write according to the use case, a sample script has been added to give some understanding of how a user script should look like. `test/` directory contains `.ts` scripts to run tests for the deployed contracts.
