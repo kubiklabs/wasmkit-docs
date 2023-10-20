@@ -1,0 +1,85 @@
+# Contract
+
+## Contract class
+
+Contract class is used to create an object which does operations related to a contract such as deploying, interacting with network. One can also list query, execute methods available for the contract using this class.
+
+**Constructor**
+
+Contract constructor requires 1 argument, contract name. If contract `.wasm` file is not present in artifacts then this constructor will throw an error.
+
+<CH.Code lineNumbers={true}>
+```js
+const contract = new CounterContract();
+```
+</CH.Code>
+
+**deploy()**
+
+Deploys the contract.
+
+<CH.Code lineNumbers={true}>
+```js
+const deploy_response = await contract.deploy(contract_owner);
+```
+</CH.Code>
+
+Gives following response:
+
+<CH.Code lineNumbers={true}>
+```js
+{
+  codeId: <code-id-val>,
+  contractCodeHash: <code-hash-val>,
+  deployTimestamp: <timestamp>
+}
+```
+</CH.Code>
+
+**instantiate()**
+
+Instantiate the contract.
+
+<CH.Code lineNumbers={true}>
+```js
+const contract_info = await contract.instantiate(
+  {
+    "name": "ERC20", "symbol": "ERC", "decimals": 10,
+    "initial_balances": [{
+      "address": contract_owner.account.address,
+      "amount": "100000000"
+    }]
+  }, "deploy test", contract_owner);
+```
+</CH.Code>
+
+Gives following response:
+
+<CH.Code lineNumbers={true}>
+```js
+{
+  contractAddress: <contract-address>,
+  instantiateTimestamp: <timestamp>
+}
+```
+</CH.Code>
+
+To list contract's execute methods, print `contract.tx`.
+
+<CH.Code lineNumbers={true}>
+```js
+wasmkit> contract.tx
+{ Approve: [Function (anonymous)], Transfer: [Function (anonymous), TransferFrom: [Function (anonymous), Burn: [Function (anonymous)] }
+```
+</CH.Code>
+
+**query methods**
+
+To list contract's query methods, print `contract.query`.
+
+<CH.Code lineNumbers={true}>
+```js
+wasmkit> contract.query
+{ Balance: [Function (anonymous), Allowance: [Function (anonymous)] }
+```
+</CH.Code>

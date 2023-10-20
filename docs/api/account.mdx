@@ -1,0 +1,50 @@
+# Account
+
+## getAccountByName()
+
+In the sample `wasmkit.config.js` file, the accounts are defined as below:
+
+<CH.Code lineNumbers={true}>
+```js
+const testnet_accounts = [
+  {
+    name: 'account_0',
+    address: 'juno1evpfprq0mre5n0zysj6cf74xl6psk96gus7dp5',
+    mnemonic: 'omit sphere nurse rib tribe suffer web account catch brain hybrid zero act gold coral shell voyage matter nose stick crucial fog judge text'
+  },
+  {
+    name: 'account_1',
+    address: 'juno1njamu5g4n0vahggrxn4ma2s4vws5x4w3u64z8h',
+    mnemonic: 'student prison fresh dwarf ecology birth govern river tissue wreck hope autumn basic trust divert dismiss buzz play pistol focus long armed flag bicycle'
+  }
+];
+```
+</CH.Code>
+
+These accounts can be easily accessed inside the scripts or in repl using the method, `getAccountByName(<account_name>)`, for example:
+
+<CH.Code lineNumbers={true}>
+```js
+const { getAccountByName } = require("wasmkit");
+
+const account_0 = getAccountByName("account_0");
+const account_1 = getAccountByName("account_1");
+
+console.log(account_0.name);  // account_0
+console.log(account_0.address); // juno1evpfprq0mre5n0zysj6cf74xl6psk96gus7dp5
+console.log(account_0.mnemonic); // omit sphere nurse rib tribe suffer web account catch brain hybrid zero act gold coral shell voyage matter nose stick crucial fog judge text
+```
+</CH.Code>
+
+## createAccounts()
+
+This method is used to generate new accounts and then can be filled with some balance using a testnet faucet `https://stakely.io/en/faucet/juno` (faucet are only for testnets). 
+
+<CH.Code lineNumbers={true}>
+```js
+const { createAccounts } = require("wasmkit");
+
+const res = await createAccounts(1); // array of one account object
+const res = await createAccounts(3);  // array of three account objects
+```
+</CH.Code>

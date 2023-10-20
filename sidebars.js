@@ -48,6 +48,15 @@ const sidebars = {
         'use-cases/polytone',
       ],
     },
+    {
+      label: 'Library API',
+      type: 'category',
+      collapsed: false,
+      items: [
+        'api/account',
+        'api/contract',
+      ],
+    },
   ],
 };
 
