@@ -35,13 +35,14 @@ const sidebars = {
         'guides/compiling-contracts',
         'guides/writing-scripts',
         'guides/testing',
+        'guides/playground',
         'guides/using-localnet',
       ],
     },
     {
       label: 'Use cases',
       type: 'category',
-      collapsed: false,
+      collapsed: true,
       items: [
         'use-cases/cw-plus',
         'use-cases/astroport',
@@ -51,7 +52,7 @@ const sidebars = {
     {
       label: 'Library API',
       type: 'category',
-      collapsed: false,
+      collapsed: true,
       items: [
         'api/account',
         'api/contract',
